@@ -2,7 +2,7 @@
 
 <!-- TODO: banner -->
 
-🚀 Adds syntax highlighting, folding, code snippets and miscellaneous support for the [Tact programming language](https://tact-lang.org/) to Sublime Text 4+.
+🚀 Adds syntax highlighting, folding, code snippets and miscellaneous support for the [Tact programming language](https://tact-lang.org/) to Sublime Text 3+.
 
 ⚡ Tact is a new programming language for TON blockchain that is focused on efficiency and simplicity. It is designed to be easy to learn and use, and to be a good fit for smart contracts, because it is a statically typed language with a simple syntax and a powerful type system.
 
@@ -73,7 +73,7 @@ To setup keyboard shortcuts, see: [Key Bindings](https://lsp.sublimetext.io/cust
 
 ## Compatibility
 
-This package is developed for Sublime Text 4+, and is not available in Package Control on older versions. It can be installed manually in Sublime Text 3, but this is unsupported, and bugs that only appear in ST3 will not be fixed.
+This package's syntax highlighting capabilities target Sublime Text 3+, while the rest of the features try to target the latest Sublime Text 4+. Bugs related to those features failing on any version lower that 4 won't be focused on.
 
 ## Useful Tact links
 
