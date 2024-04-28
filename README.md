@@ -2,7 +2,7 @@
 
 <!-- TODO: banner -->
 
-🚀 Adds syntax highlighting, folding, code snippets and miscellaneous support for the [Tact programming language](https://tact-lang.org/) to Sublime Text 3+.
+🚀 Adds syntax highlighting, folding, code snippets and miscellaneous support for the [Tact programming language](https://tact-lang.org/) to Sublime Text 4+.
 
 ⚡ Tact is a new programming language for TON blockchain that is focused on efficiency and simplicity. It is designed to be easy to learn and use, and to be a good fit for smart contracts, because it is a statically typed language with a simple syntax and a powerful type system.
 
