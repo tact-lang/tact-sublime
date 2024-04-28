@@ -128,3 +128,14 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Editors
+.vscode/
+.idea/
+.vim/
+.nvim/
+.helix/
+
+# Misc
+/.venv
+!.keep
