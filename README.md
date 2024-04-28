@@ -15,6 +15,11 @@ This package provides:
 * Indentation
 * Code snippets
 
+<!--
+  TODO: auto-convertation from JSON to PLIST using
+  https://marketplace.visualstudio.com/items?itemName=pedro-w.tmlanguage
+-->
+
 <!-- TODO: change the `<block_comment>` thing in .tmPreferences to better match grammar. -->
 
 <!-- TODO: image previews
