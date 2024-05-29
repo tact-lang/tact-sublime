@@ -181,7 +181,7 @@
         {
           "comment": "self",
           "match": "(?<!\\.)\\b(self)\\b",
-          "name": "variable.language.self.tact"
+          "name": "variable.language.this.tact"
         }
       ]
     },

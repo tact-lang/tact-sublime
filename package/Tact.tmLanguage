@@ -280,7 +280,7 @@
             <key>match</key>
             <string>(?&lt;!\.)\b(self)\b</string>
             <key>name</key>
-            <string>variable.language.self.tact</string>
+            <string>variable.language.this.tact</string>
           </dict>
         </array>
       </dict>
