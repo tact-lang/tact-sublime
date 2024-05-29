@@ -373,7 +373,7 @@
               <key>1</key>
               <dict>
                 <key>name</key>
-                <string>entity.name.type.tact storage.type.tact</string>
+                <string>entity.name.type.tact</string>
               </dict>
               <key>2</key>
               <dict>
@@ -409,7 +409,7 @@
               <key>1</key>
               <dict>
                 <key>name</key>
-                <string>entity.name.type.tact storage.type.tact</string>
+                <string>entity.name.type.tact</string>
               </dict>
               <key>2</key>
               <dict>
@@ -462,7 +462,7 @@
           <key>1</key>
           <dict>
             <key>name</key>
-            <string>entity.name.type.tact storage.type.tact</string>
+            <string>entity.name.type.tact</string>
           </dict>
           <key>2</key>
           <dict>
@@ -490,7 +490,7 @@
               <key>2</key>
               <dict>
                 <key>name</key>
-                <string>entity.name.type.tact storage.type.tact</string>
+                <string>entity.name.type.tact</string>
               </dict>
             </dict>
           </dict>

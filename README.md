@@ -21,7 +21,7 @@ This package provides:
   1. auto-convertation from JSON to PLIST using
   https://marketplace.visualstudio.com/items?itemName=pedro-w.tmlanguage
 
-  2. auto-extend all entity.name.type.tact with storage.type.tact for Sublime Text.
+  2. auto-extend all entity.name.type.tact with storage.type.tact for Sublime Text (or don't only Catppuccin seems to get that wrong)
      (themes differ here wildly, so this has to have a note in the README of sorts and, maybe, some Python scripts to change back and forth)
 -->
 
