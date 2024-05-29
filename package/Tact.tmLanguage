@@ -490,7 +490,7 @@
               <key>2</key>
               <dict>
                 <key>name</key>
-                <string>entity.name.type.numeric.tact storage.type.tact</string>
+                <string>entity.name.type.tact storage.type.tact</string>
               </dict>
             </dict>
           </dict>
@@ -583,11 +583,11 @@
           </dict>
           <dict>
             <key>comment</key>
-            <string>Math operators</string>
+            <string>Arithmetic operators</string>
             <key>match</key>
-            <string>([+\-%]|\*|(?:/(?!/)))</string>
+            <string>([+%*\-])|(/(?!/))</string>
             <key>name</key>
-            <string>keyword.operator.math.tact</string>
+            <string>keyword.operator.arithmetic.tact</string>
           </dict>
           <dict>
             <key>comment</key>
@@ -792,7 +792,7 @@
         <key>comment</key>
         <string>Any valid Tact identifier</string>
         <key>match</key>
-        <string>(?&lt;!\.)\b([a-zA-Z_][a-zA-Z0-9_]*)\b</string>
+        <string>\b([a-zA-Z_][a-zA-Z0-9_]*)\b</string>
         <key>name</key>
         <string>variable.other.tact</string>
       </dict>

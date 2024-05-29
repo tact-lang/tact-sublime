@@ -16,8 +16,13 @@ This package provides:
 * Code snippets
 
 <!--
-  TODO: auto-convertation from JSON to PLIST using
+  TODO: Specify contributing guidelines
+
+  1. auto-convertation from JSON to PLIST using
   https://marketplace.visualstudio.com/items?itemName=pedro-w.tmlanguage
+
+  2. auto-extend all entity.name.type.tact with storage.type.tact for Sublime Text.
+     (themes differ here wildly, so this has to have a note in the README of sorts and, maybe, some Python scripts to change back and forth)
 -->
 
 <!-- TODO: change the `<block_comment>` thing in .tmPreferences to better match grammar. -->
