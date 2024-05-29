@@ -98,7 +98,7 @@
               <key>0</key>
               <dict>
                 <key>name</key>
-                <string>comment.block.begin.tact</string>
+                <string>comment.block.begin.tact punctuation.definition.comment.begin.tact</string>
               </dict>
             </dict>
             <key>patterns</key>
@@ -115,7 +115,7 @@
               <key>0</key>
               <dict>
                 <key>name</key>
-                <string>comment.block.end.tact</string>
+                <string>comment.block.end.tact punctuation.definition.comment.end.tact</string>
               </dict>
             </dict>
           </dict>
@@ -295,7 +295,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>punctuation.definition.string.tact</string>
+            <string>punctuation.definition.string.begin.tact</string>
           </dict>
         </dict>
         <key>name</key>
@@ -314,7 +314,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>punctuation.definition.string.tact</string>
+            <string>punctuation.definition.string.end.tact</string>
           </dict>
         </dict>
       </dict>
@@ -323,7 +323,7 @@
         <key>comment</key>
         <string>Allowed escape sequences in strings</string>
         <key>match</key>
-        <string>(\\)(([\\"nrtvbf])|(x[a-fA-F0-9]{2})|(u[a-fA-F0-9]{4})|(u\{[a-fA-F0-9]{1,6}\}))</string>
+        <string>(?:\\)(?:(\\)|(")|([nrtvbf])|(x[a-fA-F0-9]{2})|(u[a-fA-F0-9]{4})|(u\{[a-fA-F0-9]{1,6}\}))</string>
         <key>name</key>
         <string>constant.character.escape.tact</string>
         <key>captures</key>
@@ -336,19 +336,24 @@
           <key>2</key>
           <dict>
             <key>name</key>
-            <string>constant.character.escape.special.tact</string>
+            <string>constant.character.escape.double-quote.tact</string>
           </dict>
           <key>3</key>
           <dict>
             <key>name</key>
-            <string>constant.character.escape.hex.tact</string>
+            <string>constant.character.escape.special.tact</string>
           </dict>
           <key>4</key>
           <dict>
             <key>name</key>
-            <string>constant.character.escape.unicode.tact</string>
+            <string>constant.character.escape.hex.tact</string>
           </dict>
           <key>5</key>
+          <dict>
+            <key>name</key>
+            <string>constant.character.escape.unicode.tact</string>
+          </dict>
+          <key>6</key>
           <dict>
             <key>name</key>
             <string>constant.character.escape.unicodepoint.tact</string>
@@ -485,7 +490,7 @@
               <key>1</key>
               <dict>
                 <key>name</key>
-                <string>storage.modifier.tact</string>
+                <string>keyword.other.as.tact storage.modifier.tact</string>
               </dict>
               <key>2</key>
               <dict>
@@ -518,7 +523,7 @@
               <key>1</key>
               <dict>
                 <key>name</key>
-                <string>storage.type.tact</string>
+                <string>keyword.other.tact</string>
               </dict>
               <key>2</key>
               <dict>
@@ -704,7 +709,7 @@
             <key>match</key>
             <string>(?&lt;!\.)\b(as)\b</string>
             <key>name</key>
-            <string>keyword.other.as.tact</string>
+            <string>keyword.other.as.tact storage.modifier.tact</string>
           </dict>
           <dict>
             <key>match</key>
