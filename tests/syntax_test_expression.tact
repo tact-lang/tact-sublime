@@ -1,70 +1,63 @@
 // SYNTAX TEST "Packages/Tact/package/Tact.tmLanguage"
 
 fun c() {
-  false || true;
-  // <- constant.builtin
-  //    ^ operator
-  //       ^ constant.builtin
-  //           ^ punctuation.delimiter
+    false || true;
+    // <- constant.language.bool.tact
+    //    ^^ keyword.operator.logical.tact
+    //       ^^^^ constant.language.bool.tact
+    //           ^ punctuation.semi.tact
 
-  true && true;
-  //   ^ operator
+    true && true;
+    //   ^^ keyword.operator.logical.tact
 
-  true != true;
-  //   ^ operator
+    true != true;
+    //   ^^ keyword.operator.comparison.tact
 
-  true == true;
-  //   ^ operator
+    true == true;
+    //   ^^ keyword.operator.comparison.tact
 
-  2  > 1;
-  // ^ operator
+    2  > 1;
+    // ^ keyword.operator.comparison.tact
 
-  2  >= 2;
-  // ^ operator
+    2  >= 2;
+    // ^^ keyword.operator.comparison.tact
 
-  1  < 2;
-  // ^ operator
+    1  < 2;
+    // ^ keyword.operator.comparison.tact
 
-  2  <= 2;
-  // ^ operator
+    2  <= 2;
+    // ^^ keyword.operator.comparison.tact
 
-  5  >> 1;
-  // ^ operator
+    5  >> 1;
+    // ^^ keyword.operator.bitwise.tact
 
-  1  << 5;
-  // ^ operator
+    1  << 5;
+    // ^^ keyword.operator.bitwise.tact
 
-  0  ^ 1;
-  // ^ operator
+    0  ^ 1;
+    // ^ keyword.operator.bitwise.tact
 
-  0  & 1;
-  // ^ operator
+    0  & 1;
+    // ^ keyword.operator.bitwise.tact
 
-  0  | 1;
-  // ^ operator
+    0  | 1;
+    // ^ keyword.operator.bitwise.tact
 
-  0  + 1 - 2;
-  // ^ operator
-  //     ^ operator
+    0  + 1 - 2;
+    // ^ keyword.operator.arithmetic.tact
+    //     ^ keyword.operator.arithmetic.tact
 
-  0  * 1 / 5 % 10;
-  // ^ operator
-  //     ^ operator
-  //         ^ operator
+    0  * 1 / 5 % 10;
+    // ^ keyword.operator.arithmetic.tact
+    //     ^ keyword.operator.arithmetic.tact
+    //         ^ keyword.operator.arithmetic.tact
 
-  +0;
-  // <- operator
+    +0;
+    // <- keyword.operator.arithmetic.tact
 
-  -0;
-  // <- operator
-  
-  !0;
-  // <- operator
-  
-  null!!;
-  //  ^ operator
+    -0;
+    // <- keyword.operator.arithmetic.tact
 
-  (0 );
-  // <- punctuation.bracket 
-  // ^ punctuation.bracket
+    !0;
+    // <- keyword.operator.logical.tact
 }

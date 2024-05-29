@@ -1,63 +1,65 @@
 // SYNTAX TEST "Packages/Tact/package/Tact.tmLanguage"
 
 struct Whatever {
-// <- keyword
-//     ^ type
-//              ^ punctuation.bracket
+// <- keyword.other.struct.tact
+//     ^^^^^^^^ entity.name.type.tact
+//              ^ punctuation.brackets.curly.tact
 
-  a  : Int;
-  // <- property
-  // ^ punctuation.delimiter
-  //   ^ type.builtin
-  //      ^ punctuation.delimiter
+    a  : Int;
+    // <- variable.other.tact
+    // ^ punctuation.colon.tact
+    //   ^^^ entity.name.type.tact
+    //      ^ punctuation.semi.tact
 
-  b  : String = "hello!";
-  // <- property
-  // ^ punctuation.delimiter
-  //   ^ type.builtin
-  //                    ^ punctuation.delimiter
+    b  : String = "hello!";
+    // <- variable.other.tact
+    // ^ punctuation.colon.tact
+    //   ^^^^^^ entity.name.type.tact
+    //                    ^ punctuation.semi.tact
 
-  c  : Int as int32;
-  // <- property
-  // ^ punctuation.delimiter
-  //   ^ type.builtin
-  //       ^ keyword
-  //          ^ type.builtin
-  //               ^ punctuation.delimiter
+    c  : Int as int32;
+    // <- variable.other.tact
+    // ^ punctuation.colon.tact
+    //   ^^^ entity.name.type.tact
+    //       ^^ keyword.other.as.tact storage.modifier.tact
+    //          ^^^^^ entity.name.type.tact
+    //               ^ punctuation.semi.tact
 
-  d  : Int as int256 = 10;
-  // <- property
-  // ^ punctuation.delimiter
-  //   ^ type.builtin
-  //       ^ keyword
-  //          ^ type.builtin
-  //                 ^ operator
-  //                   ^ number
-  //                     ^ punctuation.delimiter
+    d  : Int as int256 = 10;
+    // <- variable.other.tact
+    // ^ punctuation.colon.tact
+    //   ^^^ entity.name.type.tact
+    //       ^^ keyword.other.as.tact storage.modifier.tact
+    //          ^^^^^^ entity.name.type.tact
+    //                 ^ keyword.operator.assignment.equal.tact
+    //                   ^^ constant.numeric.decimal.tact
+    //                     ^ punctuation.semi.tact
 
 }
-// <- punctuation.bracket
+// <- punctuation.brackets.curly.tact
 
 fun TestStruct() {
-  Whatever{a: 10, b: "hello!", c: 10, d: 10, };
-  // <- constructor
-  //      ^ punctuation.bracket
-  //       ^ property
-  //        ^ punctuation.delimiter
-  //          ^ number
-  //            ^ punctuation.delimiter
-  //              ^ property
-  //               ^ punctuation.delimiter
-  //                 ^ string
-  //                         ^ punctuation.delimiter
-  //                           ^ property
-  //                            ^ punctuation.delimiter
-  //                              ^ number
-  //                                ^ punctuation.delimiter
-  //                                  ^ property
-  //                                   ^ punctuation.delimiter
-  //                                     ^ number
-  //                                       ^ punctuation.delimiter
-  //                                         ^ punctuation.bracket
-  //                                          ^ punctuation.delimiter
+    Whatever{a: 10, b: "hello!", c: 10, d: 10, };
+    // <- entity.name.type.tact
+    //      ^ punctuation.brackets.curly.tact
+    //       ^ variable.other.tact
+    //        ^ punctuation.colon.tact
+    //          ^^ constant.numeric.decimal.tact
+    //            ^ punctuation.comma.tact
+    //              ^ variable.other.tact
+    //               ^ punctuation.colon.tact
+    //                 ^ string.quoted.double.tact punctuation.definition.string.begin.tact
+    //                  ^^^^^^ string.quoted.double.tact
+    //                        ^ string.quoted.double.tact punctuation.definition.string.end.tact
+    //                         ^ punctuation.comma.tact
+    //                           ^ variable.other.tact
+    //                            ^ punctuation.colon.tact
+    //                              ^^ constant.numeric.decimal.tact
+    //                                ^ punctuation.comma.tact
+    //                                  ^ variable.other.tact
+    //                                   ^ punctuation.colon.tact
+    //                                     ^^ constant.numeric.decimal.tact
+    //                                       ^ punctuation.comma.tact
+    //                                         ^ punctuation.brackets.curly.tact
+    //                                          ^ punctuation.semi.tact
 }

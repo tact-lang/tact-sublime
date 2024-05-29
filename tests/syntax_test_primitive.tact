@@ -1,29 +1,29 @@
 // SYNTAX TEST "Packages/Tact/package/Tact.tmLanguage"
 
 primitive map<Int as int32, Address as remaining>;
-// <- keyword
-//        ^ type.builtin
-//           ^ punctuation.bracket
-//            ^ type.builtin
-//                ^ keyword
-//                   ^ type.builtin
-//                        ^ punctuation.delimiter
-//                          ^ type.builtin
-//                                  ^ keyword
-//                                     ^ type.builtin
-//                                              ^ punctuation.bracket
-//                                               ^ punctuation.delimiter
+// <- keyword.other.tact
+//        ^^^ entity.name.type.tact
+//           ^ punctuation.brackets.angle.tact
+//            ^^^ entity.name.type.tact
+//                ^^ keyword.other.as.tact storage.modifier.tact
+//                   ^^^^^ entity.name.type.tact
+//                        ^ punctuation.comma.tact
+//                          ^^^^^^^ entity.name.type.tact
+//                                  ^^ keyword.other.as.tact storage.modifier.tact
+//                                     ^^^^^^^^^ entity.name.type.tact
+//                                              ^ punctuation.brackets.angle.tact
+//                                               ^ punctuation.semi.tact
 
 primitive bounced<Message>;
-// <- keyword
-//        ^ type.builtin
-//               ^ punctuation.bracket
-//                ^ type
-//                       ^ punctuation.bracket
-//                        ^ punctuation.delimiter
+// <- keyword.other.tact
+//        ^^^^^^^ entity.name.type.tact
+//               ^ punctuation.brackets.angle.tact
+//                ^^^^^^^ entity.name.type.tact
+//                       ^ punctuation.brackets.angle.tact
+//                        ^ punctuation.semi.tact
 
 primitive Int?;
-// <- keyword
-//        ^ type.builtin
-//           ^ punctuation.delimiter
-//            ^ punctuation.delimiter
+// <- keyword.other.tact
+//        ^^^ entity.name.type.tact
+//           ^ keyword.operator.optional.tact
+//            ^ punctuation.semi.tact

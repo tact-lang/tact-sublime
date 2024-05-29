@@ -1,28 +1,28 @@
 // SYNTAX TEST "Packages/Tact/package/Tact.tmLanguage"
 
 contract Empty {}
-// <- keyword
-//       ^ variable
-//             ^ punctuation.bracket
-//              ^ punctuation.bracket
+// <- keyword.other.contract.tact
+//       ^ entity.name.type.tact
+//             ^ punctuation.brackets.curly.tact
+//              ^ punctuation.brackets.curly.tact
 
 contract Filled {
- init() {}
- // <- function
- //  ^ punctuation.bracket
- //   ^ punctuation.bracket
- //     ^ punctuation.bracket
- //      ^ punctuation.bracket
+    init() {}
+    // <- keyword.other.function.tact
+    //  ^ punctuation.brackets.round.tact
+    //   ^ punctuation.brackets.round.tact
+    //     ^ punctuation.brackets.curly.tact
+    //      ^ punctuation.brackets.curly.tact
 
- receive() {}
- // <- function
+    receive() {}
+    // <- keyword.other.function.tact
 
- external() {}
- // <- function
+    external() {}
+    // <- keyword.other.function.tact
 
- bounced(msg: Slice) {}
- // <- function
- //      ^ variable.parameter
- //         ^ punctuation.delimiter
- //           ^ type.builtin
+    bounced(msg: Slice) {}
+    // <- keyword.other.function.tact
+    //      ^ variable.other.tact
+    //         ^ punctuation.colon.tact
+    //           ^ entity.name.type.tact
 }

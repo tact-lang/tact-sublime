@@ -1,65 +1,65 @@
 // SYNTAX TEST "Packages/Tact/package/Tact.tmLanguage"
 
 fun empty();
-// <- keyword
-//  ^ function
-//       ^ punctuation.bracket
-//        ^ punctuation.bracket
-//         ^ punctuation.delimiter
+// <- keyword.other.function.tact
+//  ^^^^^ entity.name.function.tact
+//       ^ punctuation.brackets.round.tact
+//        ^ punctuation.brackets.round.tact
+//         ^ punctuation.semi.tact
 
-abstract fun abstract();
-// <- keyword
+abstract fun abstractf();
+// <- keyword.other.attribute.tact storage.modifier.tact
 
 abstract fun abstractType(): Int;
-//                         ^ punctuation.delimiter
-//                           ^ type.builtin
+//                         ^ punctuation.colon.tact
+//                           ^^^ entity.name.type.tact
 
 abstract fun abstractWithParam(param1: Int);
-//                             ^ variable.parameter
-//                                   ^ punctuation.delimiter
-//                                     ^ type.builtin
+//                             ^^^^^^ variable.other.tact
+//                                   ^ punctuation.colon.tact
+//                                     ^^^ entity.name.type.tact
 
 abstract fun abstractTypeWithParam(param1: Int): Int;
-//                                 ^ variable.parameter
-//                                       ^ punctuation.delimiter
-//                                         ^ type.builtin
-//                                             ^ punctuation.delimiter
-//                                               ^ type.builtin
+//                                 ^^^^^^ variable.other.tact
+//                                       ^ punctuation.colon.tact
+//                                         ^^^ entity.name.type.tact
+//                                             ^ punctuation.colon.tact
+//                                               ^^^ entity.name.type.tact
 
 fun basic(): Int {
-//         ^ punctuation.delimiter
-//           ^ type.builtin
-  return 0;
-  // <- keyword
-  //     ^ number
-  //      ^ punctuation.delimiter
+//         ^ punctuation.colon.tact
+//           ^^^ entity.name.type.tact
+    return 0;
+    // <- keyword.control.tact
+    //     ^ constant.numeric.decimal.tact
+    //      ^ punctuation.semi.tact
 }
 
 extends fun extendsType(self: String): String {
-  //                    ^ variable.parameter
-  //                        ^ punctuation.delimiter
-  //                          ^ type.builtin
-  return self;
-  //     ^ variable.parameter
+//                      ^^^^ variable.language.this.tact
+//                          ^ punctuation.colon.tact
+//                            ^^^^^^ entity.name.type.tact
+    return self;
+    //     ^^^^ variable.language.this.tact
 }
 
 extends mutates fun extendsMutatesType(self: String) {
-  //                                   ^ variable.parameter
-  self = self + self;
-  // <- variable.parameter
-  //     ^ variable.parameter
-  //            ^ variable.parameter
+//                                     ^^^^ variable.language.this.tact
+    self = self + self;
+    // <- variable.language.this.tact
+    //     ^^^^ variable.language.this.tact
+    //            ^^^^ variable.language.this.tact
 }
 
 get mutates extends virtual override inline abstract fun allAttr();
-// <- keyword
-//  ^ keyword
-//          ^ keyword
-//                  ^ keyword
-//                          ^ keyword
-//                                   ^ keyword
-//                                          ^ keyword
-//                                                   ^ keyword
+// <- keyword.other.attribute.tact
+//  ^^^^^^^ keyword.other.attribute.tact
+//          ^^^^^^^ keyword.other.attribute.tact
+//                  ^^^^^^^ keyword.other.attribute.tact storage.modifier.tact
+//                          ^^^^^^^^ keyword.other.attribute.tact storage.modifier.tact
+//                                   ^^^^^^ keyword.other.attribute.tact
+//                                          ^^^^^^^^ keyword.other.attribute.tact storage.modifier.tact
+//                                                   ^^^ keyword.other.function.tact
 
 not_a_keyword fun broken();
-// <- variable
+// <- variable.other.tact

@@ -1,25 +1,29 @@
 // SYNTAX TEST "Packages/Tact/package/Tact.tmLanguage"
 
 const declared: String;
-// <- keyword
-//    ^ constant
-//            ^ punctuation.delimiter
-//              ^ type.builtin
-//                    ^ punctuation.delimiter
+// <- keyword.other.tact
+//    ^^^^^^^^ variable.other.tact
+//            ^ punctuation.colon.tact
+//              ^^^^^^ entity.name.type.tact
+//                    ^ punctuation.semi.tact
+
+const DeclaredUppercase: String;
+// <- keyword.other.tact
+//    ^^^^^^^^^^^^^^^^^ constant.other.caps.tact
 
 override virtual abstract const theAnswer: Int = 42;
-// <- keyword
-//       ^ keyword
-//               ^ keyword
-//                        ^ keyword
-//                              ^ constant
-//                                       ^ punctuation.delimiter
-//                                         ^ type.builtin
-//                                             ^ operator
-//                                               ^ number
-//                                                 ^ punctuation.delimiter
+// <- keyword.other.attribute.tact storage.modifier.tact
+//       ^^^^^^^ keyword.other.attribute.tact storage.modifier.tact
+//               ^^^^^^^^ keyword.other.attribute.tact storage.modifier.tact
+//                        ^^^^^ keyword.other.tact
+//                              ^^^^^^^^^ variable.other.tact
+//                                       ^ punctuation.colon.tact
+//                                         ^^^ entity.name.type.tact
+//                                             ^ keyword.operator.assignment.equal.tact
+//                                               ^^ constant.numeric.decimal.tact
+//                                                 ^ punctuation.semi.tact
 
 fun refTest(): Int {
     return theAnswer + 0;
-    //     ^ constant
+    //     ^^^^^^^^^ variable.other.tact
 }
