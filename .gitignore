@@ -140,3 +140,5 @@ dist
 /.venv
 !.keep
 /*.tact
+/*.ohm
+/*.json
