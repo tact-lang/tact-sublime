@@ -508,10 +508,13 @@
 
     "function": {
       "comment": "Function declaration, definition or call",
-      "match": "\\b((?:[a-zA-Z_][a-zA-Z0-9_]*))\\s*\\(",
+      "match": "\\b((?:[a-zA-Z_][a-zA-Z0-9_]*))\\s*(\\()",
       "captures": {
         "1": {
           "name": "entity.name.function.tact"
+        },
+        "2": {
+          "name": "punctuation.brackets.round.tact"
         }
       }
     },

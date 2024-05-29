@@ -777,13 +777,18 @@
         <key>comment</key>
         <string>Function declaration, definition or call</string>
         <key>match</key>
-        <string>\b((?:[a-zA-Z_][a-zA-Z0-9_]*))\s*\(</string>
+        <string>\b((?:[a-zA-Z_][a-zA-Z0-9_]*))\s*(\()</string>
         <key>captures</key>
         <dict>
           <key>1</key>
           <dict>
             <key>name</key>
             <string>entity.name.function.tact</string>
+          </dict>
+          <key>2</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.brackets.round.tact</string>
           </dict>
         </dict>
       </dict>

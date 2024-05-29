@@ -2,7 +2,7 @@
 <plist version="1.0">
 <dict>
 	<key>scope</key>
-	<string><![CDATA[source.tact & comment.block]]></string>
+	<string><![CDATA[source.tact & comment.block.tact]]></string>
 	<key>settings</key>
 	<dict>
 		<key>unIndentedLinePattern</key>
