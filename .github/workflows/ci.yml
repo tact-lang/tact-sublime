@@ -1,0 +1,57 @@
+name: CI on Pull Requests and Pushes
+
+on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - LICENSE
+      - '*.md'
+      - .github/media/**
+  pull_request:
+    branches: ["main"]
+    paths-ignore:
+      - LICENSE
+      - '*.md'
+      - .github/media/**
+
+# Setup the version of Sublime to test against
+env:
+  SUBLIME_BUILD: 4169
+
+# Allow one concurrent deployment
+concurrency:
+  group: ${{github.workflow}}-${{github.ref}}
+  cancel-in-progress: false
+
+# Only in bash
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  syntax-tests:
+    # Reference:
+    # https://github.com/sublimehq/Packages/blob/master/.github/workflows/ci.yml
+    # https://github.com/digitalcora/sublime-text-gleam/blob/main/.github/workflows/ci.yml
+    name: Syntax tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/cache@v4
+        id: st-cache
+        with:
+          path: ~/sublime
+          key: st-${{ env.SUBLIME_BUILD }}
+
+      - if: '!steps.st-cache.outputs.cache-hit'
+        run: >
+          mkdir -p ~/.sublime
+          && curl -L https://download.sublimetext.com/st_syntax_tests_build_${{ env.SUBLIME_BUILD }}_x64.tar.xz
+          | tar Jvx -C ~/.sublime --strip-components 1
+
+      - run: |-
+          mkdir ~/.sublime/Data/Packages/Tact
+          mv package tests ~/.sublime/Data/Packages/Tact/
+          ~/.sublime/syntax_tests
