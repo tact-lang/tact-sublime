@@ -32,11 +32,15 @@
       </dict>
       <dict>
         <key>include</key>
-        <string>#type</string>
+        <string>#invalid</string>
       </dict>
       <dict>
         <key>include</key>
         <string>#constant</string>
+      </dict>
+      <dict>
+        <key>include</key>
+        <string>#type</string>
       </dict>
       <dict>
         <key>include</key>
@@ -360,6 +364,77 @@
           </dict>
         </dict>
       </dict>
+      <key>invalid</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>comment</key>
+            <string>Anything starting with __gen or __tact</string>
+            <key>match</key>
+            <string>\b__(?:gen|tact)[a-zA-Z0-9_]*\b</string>
+            <key>name</key>
+            <string>invalid.illegal.identifier.tact</string>
+          </dict>
+        </array>
+      </dict>
+      <key>constant</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>comment</key>
+            <string>self.storageReserve</string>
+            <key>match</key>
+            <string>(?&lt;=self\.)(storageReserve)\b</string>
+            <key>name</key>
+            <string>constant.other.builtin.tact</string>
+          </dict>
+          <dict>
+            <key>comment</key>
+            <string>Other constants from the core library</string>
+            <key>match</key>
+            <string>(?&lt;!\.)\b(SendRemainingValue|SendRemainingBalance|SendPayGasSeparately|SendIgnoreErrors|SendBounceIfActionFail|SendDestroyIfZero|ReserveExact|ReserveAllExcept|ReserveAtMost|ReserveAddOriginalBalance|ReserveInvertSign|ReserveBounceIfActionFail)\b</string>
+            <key>name</key>
+            <string>constant.other.builtin.tact</string>
+          </dict>
+          <dict>
+            <key>comment</key>
+            <string>ALL CAPS constants</string>
+            <key>match</key>
+            <string>\b([A-Z]{2}[A-Z0-9_]*)\b</string>
+            <key>name</key>
+            <string>constant.other.caps.tact</string>
+          </dict>
+          <dict>
+            <key>comment</key>
+            <string>Constant declaration or definition</string>
+            <key>match</key>
+            <string>^\s*(const)\s+([a-zA-Z_][A-Za-z0-9_]*)\b</string>
+            <key>captures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>keyword.other.tact</string>
+              </dict>
+              <key>2</key>
+              <dict>
+                <key>name</key>
+                <string>constant.other.declaration.tact</string>
+              </dict>
+            </dict>
+          </dict>
+          <dict>
+            <key>comment</key>
+            <string>null</string>
+            <key>match</key>
+            <string>(?&lt;!\.)\b(null)\b</string>
+            <key>name</key>
+            <string>constant.language.null.tact</string>
+          </dict>
+        </array>
+      </dict>
       <key>type</key>
       <dict>
         <key>patterns</key>
@@ -479,7 +554,7 @@
       <key>as-tlb</key>
       <dict>
         <key>comment</key>
-        <string>Storage modifiers</string>
+        <string>Serialization</string>
         <key>patterns</key>
         <array>
           <dict>
@@ -498,47 +573,6 @@
                 <string>entity.name.type.tact</string>
               </dict>
             </dict>
-          </dict>
-        </array>
-      </dict>
-      <key>constant</key>
-      <dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>comment</key>
-            <string>ALL CAPS constants</string>
-            <key>match</key>
-            <string>\b([A-Z]{2}[A-Z0-9_]*)\b</string>
-            <key>name</key>
-            <string>constant.other.caps.tact</string>
-          </dict>
-          <dict>
-            <key>comment</key>
-            <string>Constant declaration or definition</string>
-            <key>match</key>
-            <string>^\s*(const)\s+([A-Z][A-Za-z0-9_]*)\b</string>
-            <key>captures</key>
-            <dict>
-              <key>1</key>
-              <dict>
-                <key>name</key>
-                <string>keyword.other.tact</string>
-              </dict>
-              <key>2</key>
-              <dict>
-                <key>name</key>
-                <string>constant.other.caps.tact</string>
-              </dict>
-            </dict>
-          </dict>
-          <dict>
-            <key>comment</key>
-            <string>null</string>
-            <key>match</key>
-            <string>(?&lt;!\.)\b(null)\b</string>
-            <key>name</key>
-            <string>constant.language.null.tact</string>
           </dict>
         </array>
       </dict>
@@ -689,6 +723,14 @@
           </dict>
           <dict>
             <key>comment</key>
+            <string>Control flow keywords, prefixed by more than one dot</string>
+            <key>match</key>
+            <string>(?&lt;=\.\.)\b(else|catch|until|in)\b</string>
+            <key>name</key>
+            <string>keyword.control.tact</string>
+          </dict>
+          <dict>
+            <key>comment</key>
             <string>Control flow keywords</string>
             <key>match</key>
             <string>(?&lt;!\.)\b(if|else|try|catch|repeat|do|until|while|foreach|in|return)\b</string>
@@ -755,7 +797,15 @@
             <key>comment</key>
             <string>Function declaration/definition keywords</string>
             <key>match</key>
-            <string>(?&lt;!\.)\b(fun|native|init|receive|bounced|external)\b</string>
+            <string>(?&lt;!\.)\b(fun|native)\b</string>
+            <key>name</key>
+            <string>keyword.other.function.tact</string>
+          </dict>
+          <dict>
+            <key>comment</key>
+            <string>Special functions</string>
+            <key>match</key>
+            <string>(?&lt;!\.)\b(init|receive|bounced|external)(?=\s*\()</string>
             <key>name</key>
             <string>keyword.other.function.tact</string>
           </dict>

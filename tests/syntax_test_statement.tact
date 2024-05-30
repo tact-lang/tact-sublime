@@ -95,7 +95,7 @@ extends fun c(self: SomeMessage): Int {
     //       ^^^^ constant.language.bool.tact
     //           ^ punctuation.brackets.round.tact
     //             ^ punctuation.brackets.curly.tact
-    //              ^ punctuation.brackets.curly.tact 
+    //              ^ punctuation.brackets.curly.tact
 
     while (false) {}
     // <- keyword.control.tact

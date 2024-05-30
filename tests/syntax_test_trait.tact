@@ -26,7 +26,7 @@ trait Filled with Deployable, Ownable, {
 
     const a: Int;
     // <- keyword.other.tact
-    //    ^ variable.other.tact
+    //    ^ constant.other.declaration.tact
     //     ^ punctuation.colon.tact
     //       ^^^ entity.name.type.tact
     //          ^ punctuation.semi.tact

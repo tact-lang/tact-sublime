@@ -27,3 +27,9 @@ primitive Int?;
 //        ^^^ entity.name.type.tact
 //           ^ keyword.operator.optional.tact
 //            ^ punctuation.semi.tact
+
+__gen
+// <- invalid.illegal.identifier.tact
+
+__tact
+// <- invalid.illegal.identifier.tact
