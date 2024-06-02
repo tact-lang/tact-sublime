@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[init() {
+    ${0:// code}
+}]]></content>
+	<tabTrigger>init0</tabTrigger>
+	<scope>source.tact</scope>
+	<description>empty init()</description>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[let ctx: Context = context();]]></content>
+	<tabTrigger>ctx</tabTrigger>
+	<scope>source.tact</scope>
+	<description>let ctx: Context = context();</description>
+</snippet>

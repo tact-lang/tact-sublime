@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[const ${1:name}: ${2:type} = ${0:value};]]></content>
+	<tabTrigger>constant</tabTrigger>
+	<scope>source.tact</scope>
+	<description>const …: … = …;</description>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[import "@stdlib/config";]]></content>
+	<tabTrigger>impconfig</tabTrigger>
+	<scope>source.tact</scope>
+	<description>@stdlib/config</description>
+</snippet>

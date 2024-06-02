@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[bounced(msg: ${1:Slice}) {
+    ${0:// code}
+}]]></content>
+	<tabTrigger>recvbounced</tabTrigger>
+	<scope>source.tact</scope>
+	<description>bounced(…) {…}</description>
+</snippet>

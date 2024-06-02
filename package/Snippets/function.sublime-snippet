@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[fun ${1:name}(${2:params})${3:: type} {
+    ${0:// code}
+}]]></content>
+	<tabTrigger>function</tabTrigger>
+	<scope>source.tact</scope>
+	<description>function …(…): … {…}</description>
+</snippet>

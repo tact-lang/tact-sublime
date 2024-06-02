@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[try {
+    ${1:// try something}
+} catch (ex) {
+    ${0:// catch exit code}
+}]]></content>
+	<tabTrigger>trycatch</tabTrigger>
+	<scope>source.tact</scope>
+	<description>try {…} catch (ex) {…}</description>
+</snippet>

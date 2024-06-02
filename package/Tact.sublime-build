@@ -1,0 +1,4 @@
+{
+    "cmd": ["npx", "tact", "--check", "$file"],
+    "selector": "source.tact"
+}

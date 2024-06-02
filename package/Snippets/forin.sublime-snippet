@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[foreach (${1:k}, ${2:v} in ${3:map}) {
+    ${0:// code}
+}]]></content>
+	<tabTrigger>forin</tabTrigger>
+	<scope>source.tact</scope>
+	<description>foreach (k, v in …) {…}</description>
+</snippet>

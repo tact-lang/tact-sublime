@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[init(${1:name}: ${2:type}, ${3: name}: ${4:type}) {
+    ${0:// code}
+}]]></content>
+	<tabTrigger>init2</tabTrigger>
+	<scope>source.tact</scope>
+	<description>init() with 2 params</description>
+</snippet>

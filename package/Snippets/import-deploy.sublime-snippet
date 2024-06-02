@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[import "@stdlib/deploy";]]></content>
+	<tabTrigger>impdeploy</tabTrigger>
+	<scope>source.tact</scope>
+	<description>@stdlib/deploy</description>
+</snippet>

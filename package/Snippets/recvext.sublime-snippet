@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[external(${1:"..."}) {
+    ${0:// code}
+}]]></content>
+	<tabTrigger>recvext</tabTrigger>
+	<scope>source.tact</scope>
+	<description>external(…) {…}</description>
+</snippet>

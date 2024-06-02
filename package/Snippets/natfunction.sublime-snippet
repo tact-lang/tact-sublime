@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[@name(${1:func})
+native ${2:name}(${3:params})${4:: type};]]></content>
+	<tabTrigger>natfunction</tabTrigger>
+	<scope>source.tact</scope>
+	<description>@name(…) native …(…): …;</description>
+</snippet>

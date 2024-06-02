@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[do {
+    ${0:// code}
+} until (${1:condition});]]></content>
+	<tabTrigger>dountil</tabTrigger>
+	<scope>source.tact</scope>
+	<description>do {…} until (…);</description>
+</snippet>
