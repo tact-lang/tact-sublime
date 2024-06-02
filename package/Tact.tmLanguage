@@ -410,7 +410,7 @@
             <key>comment</key>
             <string>Constant declaration or definition</string>
             <key>match</key>
-            <string>^\s*(const)\s+([a-zA-Z_][A-Za-z0-9_]*)\b</string>
+            <string>(?&lt;!\.)\b(const)\s+([a-zA-Z_][A-Za-z0-9_]*)\b</string>
             <key>captures</key>
             <dict>
               <key>1</key>

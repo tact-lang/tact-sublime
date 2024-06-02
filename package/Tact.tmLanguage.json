@@ -266,7 +266,7 @@
           },
           {
             "comment": "Constant declaration or definition",
-            "match": "^\\s*(const)\\s+([a-zA-Z_][A-Za-z0-9_]*)\\b",
+            "match": "(?<!\\.)\\b(const)\\s+([a-zA-Z_][A-Za-z0-9_]*)\\b",
             "captures": {
               "1": {
                 "name": "keyword.other.tact"
