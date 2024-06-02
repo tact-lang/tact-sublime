@@ -1,6 +1,19 @@
 {
     "scope": "source.tact",
     "completions": [
+        // Annotations/Attributes
+        // {
+        //     "trigger": "name\t@name(FunC identifier)",
+        //     "contents": "name($1)",
+        //     "kind": ["function", "a", "Attribute"],
+        //     "details": "<a href=\"https://docs.tact-lang.org/book/func\">Tact Docs</a>"
+        // },
+        {
+            "trigger": "interface\t@interface(\"...\")",
+            "contents": "interface(\"$1\")",
+            "kind": ["function", "a", "Attribute"]
+        },
+
         // Literals, Base trait and constants
         {
             "trigger": "true",
