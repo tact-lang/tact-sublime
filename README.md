@@ -1,6 +1,8 @@
 # tact-sublime
 
-<!-- TODO: banner -->
+<!--
+  TODO: banner!
+-->
 
 🚀 Adds syntax highlighting, folding, code snippets and miscellaneous support for the [Tact programming language](https://tact-lang.org/) to Sublime Text [3* and onward](#compatibility).
 
@@ -8,30 +10,75 @@
 
 ## Features
 
-This package provides:
+TL;DR? [Jump straight to the installation](#installation)!
 
-* Syntax highlighting
-* Folding
-* Indentation
-* Code snippets
+### Syntax highlighting
 
-<!--
-  TODO: Specify contributing guidelines
-
-  1. auto-convertation from JSON to PLIST using
-  https://marketplace.visualstudio.com/items?itemName=pedro-w.tmlanguage
-
-  2. auto-extend all entity.name.type.tact with storage.type.tact for Sublime Text (or don't only Catppuccin seems to get that wrong)
-     (themes differ here wildly, so this has to have a note in the README of sorts and, maybe, some Python scripts to change back and forth)
--->
-
-<!-- TODO: change the `<block_comment>` thing in .tmPreferences to better match grammar. -->
+<!-- [img] & [img] -->
 
 <!-- TODO: image previews
 <p>
   <img alt="light screenshot" title="Breakers" src="images/screen-light.png" width="45%">
   <img alt="dark screenshot" title="Mariana" src="images/screen-dark.png" width="45%">
 </p>
+-->
+
+### Basic completions
+
+<!--
+[gif]
+
+Description.
+
+For more, you may try: ...
+-->
+
+### Code snippets
+
+<!--
+[gif]
+
+Description.
+-->
+
+### Syntax checks
+
+<!--
+[gif]
+
+Build: with Tact in the command palette
+-->
+
+### Symbol lists
+
+<!--
+[gif]
+
+ctrl+r and other stuff
+-->
+
+### Folding
+
+<!--
+[gif]
+
+...
+-->
+
+### Indentation
+
+<!--
+[gif]
+
+...
+-->
+
+### Comments
+
+<!--
+[gif]
+
+ctrl+/ and ctrl+shift+/
 -->
 
 ## Installation
@@ -72,9 +119,18 @@ To set it up, install the package and open its settings (**Preferences: LSP Sett
 }
 ```
 
-Config above assumes you have installed the Tact language server extracted from the [tact-vscode](https://github.com/tact-lang/tact-vscode). If not, run `npm i -g tact-extracted-ls` to install it.
+Additionally, you can disable all snippets and suggestions provided by this plugin and leave everything to LSP. To do so, set `"inhibit_snippet_competions"` to `true` right after `"clients"` in the same settings (**Preferences: LSP Settings** in the command palette):
 
-To setup keyboard shortcuts, see: [Key Bindings](https://lsp.sublimetext.io/customization/#keyboard-shortcuts-key-bindings).
+```json
+{
+  "clients": { /*...*/ },
+  "inhibit_snippet_completions": true
+}
+```
+
+Configurations above assume you have installed the Tact language server extracted from the [tact-vscode](https://github.com/tact-lang/tact-vscode). If not, run `npm i -g tact-extracted-ls` to install it.
+
+To setup keyboard shortcuts for the language server, see: [Key Bindings](https://lsp.sublimetext.io/customization/#keyboard-shortcuts-key-bindings).
 
 ## Compatibility
 
@@ -92,6 +148,12 @@ This package's syntax highlighting capabilities target Sublime Text 3+, while th
 Based on [The Open Network](https://ton.org).
 
 Built with 🤍 by [Novus Nota](https://github.com/novusnota).
+
+## Contributing
+
+When working on the grammar, do it in the JSON file. Then, convert it to Plist (XML) format using the following VSCode extension: [tmLanguage](https://marketplace.visualstudio.com/items?itemName=pedro-w.tmlanguage).
+
+Note, that color schemes greatly affect how the grammar looks like, and stick to commonly used capture names over trying to nail semantics with more specific ones.
 
 ## License
 
