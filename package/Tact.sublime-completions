@@ -118,19 +118,19 @@
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativereserve-base-modes\">Tact Docs</a>"
         },
         {
-            "trigger": "ReserveAddOriginalBalanct\tequal to 4",
+            "trigger": "ReserveAddOriginalBalance\tequal to 4",
             "contents": "ReserveAddOriginalBalance",
             "kind": ["variable", "c", "Constant"],
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativereserve-optional-flags\">Tact Docs</a>"
         },
         {
-            "trigger": "ReserveInvertSigt\tequal to 8",
+            "trigger": "ReserveInvertSign\tequal to 8",
             "contents": "ReserveInvertSign",
             "kind": ["variable", "c", "Constant"],
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativereserve-optional-flags\">Tact Docs</a>"
         },
         {
-            "trigger": "ReserveBounceIfActionFait\tequal to 16",
+            "trigger": "ReserveBounceIfActionFail\tequal to 16",
             "contents": "ReserveBounceIfActionFail",
             "kind": ["variable", "c", "Constant"],
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativereserve-optional-flags\">Tact Docs</a>"

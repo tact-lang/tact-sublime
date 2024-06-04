@@ -1,8 +1,8 @@
 # tact-sublime
 
-<!--
-  TODO: banner!
--->
+<center>
+  <img src=".github/media/banner.png" alt="Tact + Sublime Text"/>
+</center>
 
 🚀 Adds syntax highlighting, folding, code snippets and miscellaneous support for the [Tact programming language](https://tact-lang.org/) to Sublime Text [3* and onward](#compatibility).
 
@@ -10,83 +10,85 @@
 
 ## Features
 
-TL;DR? [Jump straight to the installation](#installation)!
+TL;DR? Jump straight to the [installation](#installation)!
 
-### Syntax highlighting
+### ✨ Syntax highlighting
 
-<!-- [img] & [img] -->
-
-<!-- TODO: image previews
 <p>
-  <img alt="light screenshot" title="Breakers" src="images/screen-light.png" width="45%">
-  <img alt="dark screenshot" title="Mariana" src="images/screen-dark.png" width="45%">
+  <img alt="Light theme screenshot" title="One Light" src=".github/media/screen-light.png" width="45%"/>
+  <img alt="Dark theme screenshot" title="One Dark" src=".github/media/screen-dark.png" width="45%"/>
+  <p>Color schemes on these screenshots: <i>One Light</i> | <i>One Dark</i></p>
 </p>
--->
 
-### Basic completions
+This package features a comprehensive [TextMate grammar for Tact](package/Tact.tmLanguage.json), which is used for syntax highlighting here in Sublime Text as well as in Tact docs, Nujan IDE and other places. It's thoroughly tested [locally](tests/) and in [GitHub Actions CI](.github/workflows/ci.yml), and it also plays well with [Shiki syntax highlighter](https://github.com/shikijs/shiki).
 
-<!--
-[gif]
+### ✍ Auto-completions and ⌨ Code snippets
 
-Description.
+<img src=".github/media/feature-completions.png" alt="Feature: Auto-completions and Code snippets"/>
 
-For more, you may try: ...
--->
+Completions for:
 
-### Code snippets
+* Various constants, global static functions and Structs from the [core library](https://docs.tact-lang.org/ref). Note, that all of the static functions complete with their expected arguments!
+* Literals, such as `true` or `null`
+* Keywords, such as `return` or `while`
+* Built-in types, such as `Bool` or `map<K, V>`
+* Serialization types, like `uint8` or `coins`
+* ...and more!
 
-<!--
-[gif]
+Nearly all of the completions have descriptive annotations and/or clickable links to corresponding explanatory pages in documentation. Just press on the "Tact Docs" link at the bottom of the completions window, and it will take you straight to the docs!
 
-Description.
--->
+Apart from completions, this package also provides a bunch of larger code snippets:
 
-### Syntax checks
+1. Control flow related, like snippets for nested if-else-if or try-catch statements
+2. Import related, like `impdeploy`, which expands to the full import statement for `@stdlib/deploy`
+3. Various function declaration helpers, like `natfunction` for native functions or `init2` for initialization functions with two parameters
+4. Constant and variable declaration helpers, named `constant` and `variable` respectively
+5. A special `sendparams` snippet, which expands to `send(SendParameters{…})` with some values filled in for your convenience!
+6. ...and more!
 
-<!--
-[gif]
+**Note**, that these completions and snippets aren't semantic, in the sense that they're not aware of code contexts (being inside of a function body or declaring a Struct, for example). To enable semantic completions, see the [language server setup](#lsp-integration).
 
-Build: with Tact in the command palette
--->
+### ✔ Syntax checks
 
-### Symbol lists
+![Feature: Syntax checks](.github/media/feature-checks.gif)
 
-<!--
-[gif]
+In any Tact project with `node_modules` involved, you can:
 
-ctrl+r and other stuff
--->
+1. Open the command palette (<kbd>Ctrl/Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)
+2. Select **Build With: Tact**,
 
-### Folding
+which will run syntax and type checking on the currently edited `.tact` file.
 
-<!--
-[gif]
+### 🗒 Symbol lists
 
-...
--->
+![Feature: Symbol lists](.github/media/feature-symbols.gif)
 
-### Indentation
+Use <kbd>Ctrl/Cmd</kbd>+<kbd>r</kbd> for opening and searching symbol lists in the current file.
 
-<!--
-[gif]
+### 👉 Indentation
 
-...
--->
+![Feature: Indentation](.github/media/feature-indentation.gif)
 
-### Comments
+Mostly accurate indentation support. Note, that this package doesn't come with a fully-fledged formatter, but it tries its utmost to deliver a pleasant editing experience nonetheless.
 
-<!--
-[gif]
+### `{...}` Folding
 
-ctrl+/ and ctrl+shift+/
--->
+![Feature: Folding](.github/media/feature-folding.gif)
+
+Freely collapse and expand chunks of your code in-between braces `{}` or parentheses `()`.
+
+### 💭 Comments
+
+![Feature: Comments](.github/media/feature-comments.gif)
+
+Use <kbd>Ctrl/Cmd</kbd>+<kbd>/</kbd> for a single-line comment toggle and <kbd>Ctrl/Cmd</kbd>+<kbd>Shift</kbd>+<kbd>/</kbd> for multi-line comment toggle.
 
 ## Installation
 
 <!-- TODO: Add to https://github.com/wbond/package_control_channel
 ### Through Package Control (Recommended)
 
-This package is available on [Package Control](https://packagecontrol.io/installation). To install:
+This package is available on [Package Control](https://packagecontrol.io/installation). To install it:
 
 1. Open the command palette (<kbd>Ctrl/Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)
 2. Select **Package Control: Install Package**
@@ -97,7 +99,7 @@ This package is available on [Package Control](https://packagecontrol.io/install
 
 1. Open the command palette (<kbd>Ctrl/Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)
 2. Select **Preferences: Browse Packages**, this should open the "Packages" directory in your file explorer
-3. Clone this repo into that directory.
+3. Clone this repo into that directory
 
 Don't forget to run git pull from time to time to get the latest updates of this package.
 
@@ -119,7 +121,7 @@ To set it up, install the package and open its settings (**Preferences: LSP Sett
 }
 ```
 
-Additionally, you can disable all snippets and suggestions provided by this plugin and leave everything to LSP. To do so, set `"inhibit_snippet_competions"` to `true` right after `"clients"` in the same settings (**Preferences: LSP Settings** in the command palette):
+Additionally, you can disable all snippets and suggestions provided by this (and other) packages and leave everything to LSPs. To do so, set `"inhibit_snippet_competions"` to `true` right after `"clients"` in the same settings (**Preferences: LSP Settings** in the command palette):
 
 ```json
 {
