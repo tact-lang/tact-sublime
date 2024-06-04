@@ -16,7 +16,7 @@ override virtual abstract const theAnswer: Int = 42;
 //       ^^^^^^^ keyword.other.attribute.tact storage.modifier.tact
 //               ^^^^^^^^ keyword.other.attribute.tact storage.modifier.tact
 //                        ^^^^^ keyword.other.tact
-//                              ^^^^^^^^^ variable.other.tact
+//                              ^^^^^^^^^ constant.other.declaration.tact
 //                                       ^ punctuation.colon.tact
 //                                         ^^^ entity.name.type.tact
 //                                             ^ keyword.operator.assignment.equal.tact
