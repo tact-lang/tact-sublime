@@ -24,7 +24,7 @@ This package features a comprehensive [TextMate grammar for Tact](package/Tact.t
 
 ### ✍ Auto-completions and ⌨ Code snippets
 
-![Feature: Auto-completions and Code snippets](.github/media/feature-completions.mp4)
+<img src=".github/media/feature-completions.png" alt="Feature: Auto-completions and Code snippets"/>
 
 Completions for:
 
