@@ -20,11 +20,11 @@ TL;DR? Jump straight to the [installation](#installation)!
   <p>Color schemes on these screenshots: <i>One Light</i> | <i>One Dark</i></p>
 </p>
 
+This package features a comprehensive [TextMate grammar for Tact](package/Tact.tmLanguage.json), which is used for syntax highlighting here in Sublime Text as well as in Tact docs, Nujan IDE and other places. It's thoroughly tested [locally](tests/) and in [GitHub Actions CI](.github/workflows/ci.yml), and it also plays well with [Shiki syntax highlighter](https://github.com/shikijs/shiki).
+
 ### ✍ Auto-completions and ⌨ Code snippets
 
-<!--
- TODO: Edit the vid
--->
+![Feature: Auto-completions and Code snippets](.github/media/feature-completions.mp4)
 
 Completions for:
 
@@ -50,9 +50,7 @@ Apart from completions, this package also provides a bunch of larger code snippe
 
 ### ✔ Syntax checks
 
-<!--
- TODO: Edit the vid
--->
+![Feature: Syntax checks](.github/media/feature-checks.gif)
 
 In any Tact project with `node_modules` involved, you can:
 
@@ -63,33 +61,25 @@ which will run syntax and type checking on the currently edited `.tact` file.
 
 ### 🗒 Symbol lists
 
-<!--
- TODO: Edit the vid
--->
+![Feature: Symbol lists](.github/media/feature-symbols.gif)
 
-Use <kbd>Ctrl/Cmd</kbd>+<kbd>r</kbd> for opening and searching within symbol lists for the present file.
+Use <kbd>Ctrl/Cmd</kbd>+<kbd>r</kbd> for opening and searching symbol lists in the current file.
 
 ### 👉 Indentation
 
-<!--
- TODO: Re-do the vid
--->
+![Feature: Indentation](.github/media/feature-indentation.gif)
 
 Mostly accurate indentation support. Note, that this package doesn't come with a fully-fledged formatter, but it tries its utmost to deliver a pleasant editing experience nonetheless.
 
 ### `{...}` Folding
 
-<!--
- TODO: Edit the vid
--->
+![Feature: Folding](.github/media/feature-folding.gif)
 
 Freely collapse and expand chunks of your code in-between braces `{}` or parentheses `()`.
 
 ### 💭 Comments
 
-<!--
- TODO: Edit the vid
--->
+![Feature: Comments](.github/media/feature-comments.gif)
 
 Use <kbd>Ctrl/Cmd</kbd>+<kbd>/</kbd> for a single-line comment toggle and <kbd>Ctrl/Cmd</kbd>+<kbd>Shift</kbd>+<kbd>/</kbd> for multi-line comment toggle.
 
