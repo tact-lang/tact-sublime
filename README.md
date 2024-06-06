@@ -85,7 +85,6 @@ Use <kbd>Ctrl/Cmd</kbd>+<kbd>/</kbd> for a single-line comment toggle and <kbd>C
 
 ## Installation
 
-<!-- TODO: Add to https://github.com/wbond/package_control_channel
 ### Through Package Control (Recommended)
 
 This package is available on [Package Control](https://packagecontrol.io/installation). To install it:
@@ -93,7 +92,6 @@ This package is available on [Package Control](https://packagecontrol.io/install
 1. Open the command palette (<kbd>Ctrl/Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)
 2. Select **Package Control: Install Package**
 3. Select **Tact**
--->
 
 ### Manual installation
 
