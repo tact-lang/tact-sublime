@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[let ${1:name}: ${2:type} = ${0:value};]]></content>
+	<content><![CDATA[let ${1:name}${2:: type} = ${0:value};]]></content>
 	<tabTrigger>variable</tabTrigger>
 	<scope>source.tact</scope>
 	<description>let …: … = …;</description>
