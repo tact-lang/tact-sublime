@@ -725,7 +725,7 @@
             <key>comment</key>
             <string>Control flow keywords, prefixed by more than one dot</string>
             <key>match</key>
-            <string>(?&lt;=\.\.)\b(else|catch|until|in)\b</string>
+            <string>(?&lt;=\.\.)\b(else|catch|until|in(?!\s*\())\b</string>
             <key>name</key>
             <string>keyword.control.tact</string>
           </dict>
@@ -733,7 +733,7 @@
             <key>comment</key>
             <string>Control flow keywords</string>
             <key>match</key>
-            <string>(?&lt;!\.)\b(if|else|try|catch|repeat|do|until|while|foreach|in|return)\b</string>
+            <string>(?&lt;!\.)\b(if|else|try|catch|repeat|do|until|while|foreach|in(?!\s*\()|return)\b</string>
             <key>name</key>
             <string>keyword.control.tact</string>
           </dict>
