@@ -633,10 +633,10 @@
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-debug#nativethrow\">Tact Docs</a>"
         },
         {
-            "trigger": "nativeThrowWhen\tthrow exit code under condition",
-            "contents": "nativeThrowWhen(${1:code_Int}, ${2:condition_Bool})",
+            "trigger": "nativeThrowIf\tthrow exit code under condition",
+            "contents": "nativeThrowIf(${1:code_Int}, ${2:condition_Bool})",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-debug#nativethrowwhen\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-debug#nativethrowif\">Tact Docs</a>"
         },
         {
             "trigger": "nativeThrowUnless\tthrow exit code unless condition",
