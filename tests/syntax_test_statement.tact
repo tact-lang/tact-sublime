@@ -52,6 +52,9 @@ extends fun c(self: SomeMessage): Int {
         // ^^ keyword.operator.assignment.tact
         //    ^^ constant.numeric.decimal.tact
         //      ^ punctuation.semi.tact
+
+        let _ = 20;
+        //  ^ comment.unused-identifier.tact
     }
 
     self.description = "Tact is awesome!";
