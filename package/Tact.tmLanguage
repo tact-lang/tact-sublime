@@ -160,7 +160,7 @@
                 <key>comment</key>
                 <string>FunC identifier</string>
                 <key>match</key>
-                <string>((?:[a-zA-Z_\'\?!&amp;]|::)(?:[a-zA-Z0-9_\'\?!&amp;]|::)*)</string>
+                <string>(.*?)</string>
                 <key>name</key>
                 <string>entity.name.function.func.tact</string>
               </dict>
