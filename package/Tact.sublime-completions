@@ -11,7 +11,8 @@
         {
             "trigger": "interface\t@interface(\"...\")",
             "contents": "interface(\"$1\")",
-            "kind": ["function", "a", "Attribute"]
+            "kind": ["function", "a", "Attribute"],
+            "details": "<a href=\"https://docs.tact-lang.org/book/contracts#interfaces\">Tact Docs</a>"
         },
 
         // Literals, Base trait and constants
@@ -304,17 +305,20 @@
         {
             "trigger": "bytes32\tfor Slices",
             "contents": "bytes32",
-            "kind": "type"
+            "kind": "type",
+            "details": "<a href=\"https://docs.tact-lang.org/book/cells#serialization-bytes32\">Tact Docs</a>"
         },
         {
             "trigger": "bytes64\tfor Slices",
             "contents": "bytes64",
-            "kind": "type"
+            "kind": "type",
+            "details": "<a href=\"https://docs.tact-lang.org/book/cells#serialization-bytes64\">Tact Docs</a>"
         },
         {
             "trigger": "remaining\tfor Cells, Builders and Slices",
             "contents": "remaining",
-            "kind": "type"
+            "kind": "type",
+            "details": "<a href=\"https://docs.tact-lang.org/book/cells#serialization-remaining\">Tact Docs</a>"
         },
 
         // Keywords
@@ -446,17 +450,20 @@
         {
             "trigger": "abstract\tconstant or function to be defined",
             "contents": "abstract $0",
-            "kind": "keyword"
+            "kind": "keyword",
+            "details": "<a href=\"https://docs.tact-lang.org/book/contracts#traits\">Tact Docs</a>"
         },
         {
             "trigger": "virtual\tconstant or function allowing overrides",
             "contents": "virtual $0",
-            "kind": "keyword"
+            "kind": "keyword",
+            "details": "<a href=\"https://docs.tact-lang.org/book/contracts#traits\">Tact Docs</a>"
         },
         {
             "trigger": "override\tconstant or function to be overridden",
             "contents": "override $0",
-            "kind": "keyword"
+            "kind": "keyword",
+            "details": "<a href=\"https://docs.tact-lang.org/book/contracts#traits\">Tact Docs</a>"
         },
         {
             "trigger": "extends\textension function",
