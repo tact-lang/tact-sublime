@@ -14,6 +14,11 @@
             "kind": ["function", "a", "Attribute"],
             "details": "<a href=\"https://docs.tact-lang.org/book/contracts#interfaces\">Tact Docs</a>"
         },
+        {
+            "trigger": "asm\tasm with optional arrangement (...)",
+            "contents": "asm $0",
+            "kind": ["function", "a", "Attribute"]
+        },
 
         // Literals, Base trait and constants
         {

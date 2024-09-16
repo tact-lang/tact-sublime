@@ -139,8 +139,39 @@
           }
         },
         {
+          "comment": "Asm arrangements",
+          "begin": "(?<!\\.)(asm)\\s*(\\()",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.other.attribute-name.tact"
+            },
+            "2": {
+              "name": "punctuation.brackets.round.tact"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#variable"
+            },
+            {
+              "match": "->",
+              "name": "keyword.operator.mapsto.tact"
+            },
+            {
+              "match": "\\b([0-9]*)\\b",
+              "name": "constant.numeric.decimal.tact"
+            }
+          ],
+          "end": "\\)",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.brackets.round.tact"
+            }
+          }
+        },
+        {
           "comment": "Fallback match",
-          "match": "(?<!\\.)\\b(@name|@interface)\\b",
+          "match": "(?<!\\.)\\b(@name|@interface|asm)\\b",
           "name": "entity.other.attribute-name.tact"
         }
       ]

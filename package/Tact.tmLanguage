@@ -214,9 +214,57 @@
           </dict>
           <dict>
             <key>comment</key>
+            <string>Asm arrangements</string>
+            <key>begin</key>
+            <string>(?&lt;!\.)(asm)\s*(\()</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>entity.other.attribute-name.tact</string>
+              </dict>
+              <key>2</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.brackets.round.tact</string>
+              </dict>
+            </dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#variable</string>
+              </dict>
+              <dict>
+                <key>match</key>
+                <string>-&gt;</string>
+                <key>name</key>
+                <string>keyword.operator.mapsto.tact</string>
+              </dict>
+              <dict>
+                <key>match</key>
+                <string>\b([0-9]*)\b</string>
+                <key>name</key>
+                <string>constant.numeric.decimal.tact</string>
+              </dict>
+            </array>
+            <key>end</key>
+            <string>\)</string>
+            <key>endCaptures</key>
+            <dict>
+              <key>0</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.brackets.round.tact</string>
+              </dict>
+            </dict>
+          </dict>
+          <dict>
+            <key>comment</key>
             <string>Fallback match</string>
             <key>match</key>
-            <string>(?&lt;!\.)\b(@name|@interface)\b</string>
+            <string>(?&lt;!\.)\b(@name|@interface|asm)\b</string>
             <key>name</key>
             <string>entity.other.attribute-name.tact</string>
           </dict>
