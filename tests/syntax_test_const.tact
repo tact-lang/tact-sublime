@@ -46,6 +46,8 @@ fun builtin() {
     // <- constant.other.builtin.tact
     SendDestroyIfZero;
     // <- constant.other.builtin.tact
+    SendOnlyEstimateFee;
+    // <- constant.other.builtin.tact
 
     ReserveExact;
     // <- constant.other.builtin.tact

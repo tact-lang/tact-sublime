@@ -63,3 +63,39 @@ fun TestStruct() {
     //                                         ^ punctuation.brackets.curly.tact
     //                                          ^ punctuation.semi.tact
 }
+
+struct Serialization {
+    f1: Int as uint1;
+    //         ^^^^^ entity.name.type.tact
+    f2: Int as int1;
+    //         ^^^^ entity.name.type.tact
+    f3: Int as uint10;
+    //         ^^^^^^ entity.name.type.tact
+    f4: Int as int10;
+    //         ^^^^^ entity.name.type.tact
+    f5: Int as uint100;
+    //         ^^^^^^^ entity.name.type.tact
+    f6: Int as int100;
+    //         ^^^^^^ entity.name.type.tact
+    f7: Int as uint200;
+    //         ^^^^^^^ entity.name.type.tact
+    f8: Int as int200;
+    //         ^^^^^^ entity.name.type.tact
+    f9: Int as uint256;
+    //         ^^^^^^^ entity.name.type.tact
+    f10: Int as int257;
+    //          ^^^^^^ entity.name.type.tact
+    f9wrong: Int as uint257;
+    //              ^^^^^^^ variable.other.tact
+    f10wrong: Int as int258;
+    //               ^^^^^^ variable.other.tact
+
+    b32: Slice as bytes32;
+    //            ^^^^^^^ entity.name.type.tact
+    b64: Slice as bytes64;
+    //            ^^^^^^^ entity.name.type.tact
+    coin: Int as coins;
+    //           ^^^^^ entity.name.type.tact
+    payload: Slice as remaining;
+    //                ^^^^^^^^^ entity.name.type.tact
+}
