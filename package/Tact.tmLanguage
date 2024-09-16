@@ -442,7 +442,7 @@
             <key>comment</key>
             <string>Other constants from the core library</string>
             <key>match</key>
-            <string>(?&lt;!\.)\b(SendRemainingValue|SendRemainingBalance|SendPayGasSeparately|SendIgnoreErrors|SendBounceIfActionFail|SendDestroyIfZero|ReserveExact|ReserveAllExcept|ReserveAtMost|ReserveAddOriginalBalance|ReserveInvertSign|ReserveBounceIfActionFail)\b</string>
+            <string>(?&lt;!\.)\b(SendRemainingValue|SendRemainingBalance|SendPayGasSeparately|SendIgnoreErrors|SendBounceIfActionFail|SendDestroyIfZero|SendOnlyEstimateFee|ReserveExact|ReserveAllExcept|ReserveAtMost|ReserveAddOriginalBalance|ReserveInvertSign|ReserveBounceIfActionFail)\b</string>
             <key>name</key>
             <string>constant.other.builtin.tact</string>
           </dict>
