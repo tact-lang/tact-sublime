@@ -243,8 +243,18 @@
                 <string>keyword.operator.mapsto.tact</string>
               </dict>
               <dict>
+                <key>comment</key>
+                <string>Decimal integer WITH leading zero</string>
                 <key>match</key>
-                <string>\b([0-9]+)\b</string>
+                <string>\b(0[0-9]*)\b</string>
+                <key>name</key>
+                <string>constant.numeric.decimal.tact</string>
+              </dict>
+              <dict>
+                <key>comment</key>
+                <string>Decimal integer WITHOUT leading zero</string>
+                <key>match</key>
+                <string>\b([1-9](?:_?[0-9])*)\b</string>
                 <key>name</key>
                 <string>constant.numeric.decimal.tact</string>
               </dict>
