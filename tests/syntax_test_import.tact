@@ -7,7 +7,7 @@ import "@stdlib/deploy";
 //                    ^ string.quoted.double.tact punctuation.definition.string.end.tact
 //                     ^ punctuation.semi.tact
 
-// comment
+// NOTE: comment
 // <- comment.line.double-slash.tact punctuation.definition.comment.line.double-slash.tact
 
 /* multi-line comment/doc-string */

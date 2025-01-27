@@ -4,18 +4,12 @@
   <dict>
     <key>name</key>
     <string>Tact</string>
-    <key>displayName</key>
-    <string>Tact</string>
     <key>scopeName</key>
     <string>source.tact</string>
     <key>fileTypes</key>
     <array>
       <string>tact</string>
     </array>
-    <key>foldingStartMarker</key>
-    <string>\{\s*$</string>
-    <key>foldingStopMarker</key>
-    <string>^\s*\}</string>
     <key>patterns</key>
     <array>
       <dict>
@@ -128,7 +122,7 @@
       <key>todo</key>
       <dict>
         <key>match</key>
-        <string>(?i)\b(FIXME|TODO|CHANGED|XXX|IDEA|HACK|NOTE|REVIEW|NB|BUG)\b(?-i)</string>
+        <string>\b(FIXME|TODO|CHANGED|XXX|IDEA|HACK|NOTE|REVIEW|NB|BUG)\b</string>
         <key>name</key>
         <string>keyword.comment.todo.tact</string>
       </dict>
@@ -222,7 +216,7 @@
               <key>1</key>
               <dict>
                 <key>name</key>
-                <string>entity.other.attribute-name.tact</string>
+                <string>keyword.other.asm.tact</string>
               </dict>
               <key>2</key>
               <dict>
@@ -274,9 +268,17 @@
             <key>comment</key>
             <string>Fallback match</string>
             <key>match</key>
-            <string>(?&lt;!\.)\b(@name|@interface|asm)\b</string>
+            <string>(?&lt;!\.)\b(@name|@interface)\b</string>
             <key>name</key>
             <string>entity.other.attribute-name.tact</string>
+          </dict>
+          <dict>
+            <key>comment</key>
+            <string>Fallback match</string>
+            <key>match</key>
+            <string>(?&lt;!\.)\b(asm)\b</string>
+            <key>name</key>
+            <string>keyword.other.asm.tact</string>
           </dict>
         </array>
       </dict>
@@ -617,7 +619,7 @@
         <array>
           <dict>
             <key>match</key>
-            <string>(?&lt;!\.)\b(as)\s+(coins|remaining|bytes32|bytes64|int257|u?int(?:2[0-5][0-6]|1[0-9][0-9]|[1-9][0-9]?))\b</string>
+            <string>(?&lt;!\.)\b(as)\s+(coins|remaining|bytes(?:32|64)|int257|u?int(?:25[0-6]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]?))\b</string>
             <key>captures</key>
             <dict>
               <key>1</key>

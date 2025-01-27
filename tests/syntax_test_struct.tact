@@ -79,7 +79,7 @@ struct Serialization {
     //         ^^^^^^ entity.name.type.tact
     f7: Int as uint200;
     //         ^^^^^^^ entity.name.type.tact
-    f8: Int as int200;
+    f8: Int as int249;
     //         ^^^^^^ entity.name.type.tact
     f9: Int as uint256;
     //         ^^^^^^^ entity.name.type.tact
