@@ -17,7 +17,8 @@
         {
             "trigger": "asm\tasm with optional arrangement (...)",
             "contents": "asm $0",
-            "kind": ["function", "a", "Attribute"]
+            "kind": ["function", "a", "Attribute"],
+            "details": "<a href=\"https://docs.tact-lang.org/book/assembly-functions\">Tact Docs</a>"
         },
 
         // Literals, Base trait and constants
@@ -108,7 +109,8 @@
         {
             "trigger": "SendOnlyEstimateFee\tequal to 1024",
             "contents": "SendOnlyEstimateFee",
-            "kind": ["variable", "c", "Constant"]
+            "kind": ["variable", "c", "Constant"],
+            "details": "<a href=\"https://docs.tact-lang.org/book/message-mode#base-modes\">Tact Docs</a>"
         },
         {
             "trigger": "ReserveExact\tequal to 0",
@@ -163,12 +165,14 @@
         {
             "trigger": "StdAddress",
             "contents": "StdAddress",
-            "kind": ["variable", "s", "Struct"]
+            "kind": ["variable", "s", "Struct"],
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#parsestdaddress\">Tact Docs</a>"
         },
         {
             "trigger": "VarAddress",
             "contents": "VarAddress",
-            "kind": ["variable", "s", "Struct"]
+            "kind": ["variable", "s", "Struct"],
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#parsevaraddress\">Tact Docs</a>"
         },
 
         // Built-in types and serialization options
@@ -630,22 +634,26 @@
         {
             "trigger": "slice\tSlice from a BoC String at compile-time",
             "contents": "slice(${1:bocBase64String})",
-            "kind": "function"
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-comptime#slice\">Tact Docs</a>"
         },
         {
             "trigger": "rawSlice\tSlice from a String at compile-time",
             "contents": "rawSlice(${1:someString})",
-            "kind": "function"
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-comptime#rawslice\">Tact Docs</a>"
         },
         {
-            "trigger": "ascii\tInt sum of ASCII values at compile-time",
+            "trigger": "ascii\tInt of hex of ASCII characters at compile-time",
             "contents": "aslii(${1:asciiString})",
-            "kind": "function"
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-comptime#ascii\">Tact Docs</a>"
         },
         {
             "trigger": "crc32\tCRC32 of a String at compile-time",
             "contents": "crc32(${1:someString})",
-            "kind": "function"
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-comptime#crc32\">Tact Docs</a>"
         },
 
         // Core library: Debug
@@ -694,12 +702,14 @@
         {
             "trigger": "parseStdAddress\tparse StdAddress from a Slice",
             "contents": "parseStdAddress(${1:slice_Slice})",
-            "kind": "function"
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#parsestdaddress\">Tact Docs</a>"
         },
         {
             "trigger": "parseVarAddress\tparse VarAddress from a Slice",
             "contents": "parseVarAddress(${1:slice_Slice})",
-            "kind": "function"
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#parsevaraddress\">Tact Docs</a>"
         },
 
         // Core library: Random
@@ -868,15 +878,16 @@
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativerandominterval\">Tact Docs</a>"
         },
         {
-            "trigger": "nativeSendMessage\tsend message Cell with mode Int",
-            "contents": "nativeSendMessage(${1:cell}, ${2:mode_Int})",
+            "trigger": "nativeSendMessage\tsend msg Cell with mode Int",
+            "contents": "nativeSendMessage(${1:msg_Cell}, ${2:mode_Int})",
             "kind": "function",
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativesendmessage\">Tact Docs</a>"
         },
         {
-            "trigger": "nativeSendMessageReturnForwardFee\tsend message Cell with mode Int and get fees",
-            "contents": "nativeSendMessageReturnForwardFee(${1:cell}, ${2:mode_Int})",
-            "kind": "function"
+            "trigger": "nativeSendMessageReturnForwardFee\tsend msg Cell with mode Int and get fees",
+            "contents": "nativeSendMessageReturnForwardFee(${1:msg_Cell}, ${2:mode_Int})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativesendmessagereturnforwardfee\">Tact Docs</a>"
         },
         {
             "trigger": "nativeReserve\treserve nanoToncoin amount Int with mode Int",
@@ -885,49 +896,52 @@
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativereserve\">Tact Docs</a>"
         },
         {
-            "trigger": "nativeReserve\treserve nanoToncoin amount Int with mode Int",
-            "contents": "nativeReserve(${1:amount_Int}, ${2:mode_Int})",
-            "kind": "function"
-        },
-        {
             "trigger": "gasConsumed\tget gas consumed so far",
             "contents": "gasConsumed()",
-            "kind": "function"
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#gasconsumed\">Tact Docs</a>"
         },
         {
             "trigger": "getComputeFee\tcalc compute cost in nanoToncoins",
             "contents": "getComputeFee(${1:gas_used_Int, ${2:is_masterchain_Bool})",
-            "kind": "function"
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#getcomputefee\">Tact Docs</a>"
         },
         {
             "trigger": "getStorageFee\tcalc storage fees in nanoToncoins",
             "contents": "getStorageFee(${1:cells_Int, ${2:bits_Int}, ${3:seconds_Int}, ${4:is_masterchain_Bool})",
-            "kind": "function"
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#getstoragefee\">Tact Docs</a>"
         },
         {
             "trigger": "getForwardFee\tcalc forward fees in nanoToncoins",
             "contents": "getForwardFee(${1:cells_Int, ${2:bits_Int}, ${3:is_masterchain_Bool})",
-            "kind": "function"
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#getforwardfee\">Tact Docs</a>"
         },
         {
             "trigger": "getSimpleComputeFee\tcalc extra compute cost in nanoToncoins",
             "contents": "getSimpleComputeFee(${1:gas_used_Int, ${2:is_masterchain_Bool})",
-            "kind": "function"
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#getsimplecomputefee\">Tact Docs</a>"
         },
         {
             "trigger": "getSimpleForwardFee\tcalc extra forward fees in nanoToncoins",
             "contents": "getSimpleForwardFee(${1:cells_Int, ${2:bits_Int}, ${3:is_masterchain_Bool})",
-            "kind": "function"
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#getsimpleforwardfee\">Tact Docs</a>"
         },
         {
             "trigger": "getOriginalFwdFee\tcalc original fwd_fee in nanoToncoins",
             "contents": "getOriginalFwdFee(${1:fwd_fee_Int, ${2:is_masterchain_Bool})",
-            "kind": "function"
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#getoriginalfwdfee\">Tact Docs</a>"
         },
         {
             "trigger": "myStorageDue\tstorage fee debt in nanoToncoins",
-            "contents": "myStorageDue(${1:fwd_fee_Int, ${2:is_masterchain_Bool})",
-            "kind": "function"
+            "contents": "myStorageDue()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#mystoragedue\">Tact Docs</a>"
         },
     ]
 }
