@@ -216,7 +216,7 @@
               <key>1</key>
               <dict>
                 <key>name</key>
-                <string>entity.other.attribute-name.tact</string>
+                <string>keyword.other.asm.tact</string>
               </dict>
               <key>2</key>
               <dict>
@@ -268,9 +268,17 @@
             <key>comment</key>
             <string>Fallback match</string>
             <key>match</key>
-            <string>(?&lt;!\.)\b(@name|@interface|asm)\b</string>
+            <string>(?&lt;!\.)\b(@name|@interface)\b</string>
             <key>name</key>
             <string>entity.other.attribute-name.tact</string>
+          </dict>
+          <dict>
+            <key>comment</key>
+            <string>Fallback match</string>
+            <key>match</key>
+            <string>(?&lt;!\.)\b(asm)\b</string>
+            <key>name</key>
+            <string>keyword.other.asm.tact</string>
           </dict>
         </array>
       </dict>

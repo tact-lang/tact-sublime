@@ -140,7 +140,7 @@
           "begin": "(?<!\\.)(asm)\\s*(\\()",
           "beginCaptures": {
             "1": {
-              "name": "entity.other.attribute-name.tact"
+              "name": "keyword.other.asm.tact"
             },
             "2": {
               "name": "punctuation.brackets.round.tact"
@@ -174,8 +174,13 @@
         },
         {
           "comment": "Fallback match",
-          "match": "(?<!\\.)\\b(@name|@interface|asm)\\b",
+          "match": "(?<!\\.)\\b(@name|@interface)\\b",
           "name": "entity.other.attribute-name.tact"
+        },
+        {
+          "comment": "Fallback match",
+          "match": "(?<!\\.)\\b(asm)\\b",
+          "name": "keyword.other.asm.tact"
         }
       ]
     },
