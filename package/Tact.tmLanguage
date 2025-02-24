@@ -698,6 +698,14 @@
           </dict>
           <dict>
             <key>comment</key>
+            <string>codeOf expression</string>
+            <key>match</key>
+            <string>\b(codeOf)\b</string>
+            <key>name</key>
+            <string>keyword.operator.new.tact</string>
+          </dict>
+          <dict>
+            <key>comment</key>
             <string>Ternary expression</string>
             <key>begin</key>
             <string>(?!\?\.\s*[^[:digit:]])(\?)(?!\?)</string>
