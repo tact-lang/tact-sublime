@@ -117,6 +117,11 @@ extends fun c(self: Int, ) {
     //                        ^ punctuation.brackets.round.tact
     //                         ^ punctuation.semi.tact
 
+    // codeOf_expression
+    codeOf Contract;
+    // <- keyword.operator.new.tact
+    //     ^^^^^^^^ entity.name.type.tact
+
 // NOTE: editing constant.character stuff right now
 // consider simplifying capture names there :)
     // string
