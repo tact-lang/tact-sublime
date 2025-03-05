@@ -33,7 +33,7 @@ Completions for:
 * Keywords, such as `return` or `while`
 * Built-in types, such as `Bool` or `map<K, V>`
 * Serialization types, like `uint8` or `coins`
-* and more!
+* …and more!
 
 Nearly all completions have descriptive annotations and/or clickable links to corresponding explanatory pages in the documentation. Press the "Tact Docs" link at the bottom of the completions window, and it will take you straight to the docs!
 
@@ -119,7 +119,7 @@ To set it up, install the package and open its settings (**Preferences: LSP Sett
 }
 ```
 
-Additionally, you can turn off all snippets and suggestions provided by this (and other) packages and leave everything to LSPs. To do so, set `"inhibit_snippet_competions"` to `true` right after `"clients"` in the same settings (**Preferences: LSP Settings** in the command palette):
+Additionally, you can disable all snippets and suggestions provided by this (and other) packages and leave everything to LSPs. To do so, set `"inhibit_snippet_competions"` to `true` right after `"clients"` in the same settings (**Preferences: LSP Settings** in the command palette):
 
 ```json
 {
