@@ -98,4 +98,14 @@ struct Serialization {
     //           ^^^^^ entity.name.type.tact
     payload: Slice as remaining;
     //                ^^^^^^^^^ entity.name.type.tact
+
+    v16: Int as varint16;
+    //          ^^^^^^^^ entity.name.type.tact
+    v32: Int as varint32;
+    //          ^^^^^^^^ entity.name.type.tact
+
+    vu16: Int as varuint16;
+    //           ^^^^^^^^^ entity.name.type.tact
+    vu32: Int as varuint32;
+    //           ^^^^^^^^^ entity.name.type.tact
 }

@@ -121,9 +121,8 @@ extends fun c(self: Int, ) {
     codeOf Contract;
     // <- keyword.operator.new.tact
     //     ^^^^^^^^ entity.name.type.tact
+    //             ^ punctuation.semi.tact
 
-// NOTE: editing constant.character stuff right now
-// consider simplifying capture names there :)
     // string
        "// \\ \" \n\r \t\v \b\f \u{0} \u{FFFFFF} \u0000 \xFF";
     // ^ string.quoted.double.tact punctuation.definition.string.begin.tact

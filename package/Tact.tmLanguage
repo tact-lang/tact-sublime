@@ -454,7 +454,7 @@
             <key>comment</key>
             <string>Other constants from the core library</string>
             <key>match</key>
-            <string>(?&lt;!\.)\b(SendRemainingValue|SendRemainingBalance|SendPayGasSeparately|SendIgnoreErrors|SendBounceIfActionFail|SendDestroyIfZero|SendOnlyEstimateFee|ReserveExact|ReserveAllExcept|ReserveAtMost|ReserveAddOriginalBalance|ReserveInvertSign|ReserveBounceIfActionFail)\b</string>
+            <string>(?&lt;!\.)\b(SendDefaultMode|SendRemainingValue|SendRemainingBalance|SendPayGasSeparately|SendIgnoreErrors|SendBounceIfActionFail|SendDestroyIfZero|SendOnlyEstimateFee|ReserveExact|ReserveAllExcept|ReserveAtMost|ReserveAddOriginalBalance|ReserveInvertSign|ReserveBounceIfActionFail)\b</string>
             <key>name</key>
             <string>constant.other.builtin.tact</string>
           </dict>
@@ -619,7 +619,7 @@
         <array>
           <dict>
             <key>match</key>
-            <string>(?&lt;!\.)\b(as)\s+(coins|remaining|bytes(?:32|64)|int257|u?int(?:25[0-6]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]?))\b</string>
+            <string>(?&lt;!\.)\b(as)\s+(coins|varu?int(?:32|16)|remaining|bytes(?:32|64)|int257|u?int(?:25[0-6]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]?))\b</string>
             <key>captures</key>
             <dict>
               <key>1</key>
@@ -660,7 +660,7 @@
             <key>comment</key>
             <string>Augmented assignment operators</string>
             <key>match</key>
-            <string>(\+=|-=|\*=|/=|%=|\^=|&amp;=|\|=|&lt;&lt;=|&gt;&gt;=)</string>
+            <string>(\+=|-=|\*=|/=|%=|\^=|&amp;=|\|=|\|\|=|&amp;&amp;=|&lt;&lt;=|&gt;&gt;=)</string>
             <key>name</key>
             <string>keyword.operator.assignment.tact</string>
           </dict>
