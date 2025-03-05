@@ -295,7 +295,7 @@
           },
           {
             "comment": "Other constants from the core library",
-            "match": "(?<!\\.)\\b(SendRemainingValue|SendRemainingBalance|SendPayGasSeparately|SendIgnoreErrors|SendBounceIfActionFail|SendDestroyIfZero|SendOnlyEstimateFee|ReserveExact|ReserveAllExcept|ReserveAtMost|ReserveAddOriginalBalance|ReserveInvertSign|ReserveBounceIfActionFail)\\b",
+            "match": "(?<!\\.)\\b(SendDefaultMode|SendRemainingValue|SendRemainingBalance|SendPayGasSeparately|SendIgnoreErrors|SendBounceIfActionFail|SendDestroyIfZero|SendOnlyEstimateFee|ReserveExact|ReserveAllExcept|ReserveAtMost|ReserveAddOriginalBalance|ReserveInvertSign|ReserveBounceIfActionFail)\\b",
             "name": "constant.other.builtin.tact"
           },
           {
@@ -404,7 +404,7 @@
         "comment": "Serialization",
         "patterns": [
           {
-            "match": "(?<!\\.)\\b(as)\\s+(coins|remaining|bytes(?:32|64)|int257|u?int(?:25[0-6]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]?))\\b",
+            "match": "(?<!\\.)\\b(as)\\s+(coins|varu?int(?:32|16)|remaining|bytes(?:32|64)|int257|u?int(?:25[0-6]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]?))\\b",
             "captures": {
               "1": {
                 "name": "keyword.other.as.tact storage.modifier.tact"
@@ -431,7 +431,7 @@
           },
           {
             "comment": "Augmented assignment operators",
-            "match": "(\\+=|-=|\\*=|/=|%=|\\^=|&=|\\|=|<<=|>>=)",
+            "match": "(\\+=|-=|\\*=|/=|%=|\\^=|&=|\\|=|\\|\\|=|&&=|<<=|>>=)",
             "name": "keyword.operator.assignment.tact"
           },
           {

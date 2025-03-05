@@ -33,6 +33,8 @@ fun builtin() {
     // <- constant.other.caps.tact
     // ^^^^^^^^^ constant.other.caps.tact
 
+    SendDefaultMode;
+    // <- constant.other.builtin.tact
     SendRemainingValue;
     // <- constant.other.builtin.tact
     SendRemainingBalance;
