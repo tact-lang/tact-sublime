@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[send(SendParameters{to: ${1:sender()}, value: ${2:0}})$0]]></content>
+	<content><![CDATA[send(SendParameters{to: ${1:sender()}, value: ${2:0}});$0]]></content>
 	<tabTrigger>sendparams</tabTrigger>
 	<scope>source.tact</scope>
 	<description>send(SendParameters{…})</description>

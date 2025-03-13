@@ -958,6 +958,12 @@
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#getconfigparam\">Tact Docs</a>"
         },
         {
+            "trigger": "forceBasechain\tthrow an exception if its not basechain",
+            "contents": "forceBasechain(${1:address})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#forcebasechain\">Tact Docs</a>"
+        },
+        {
             "trigger": "acceptMessage\tbuy some gas for external message",
             "contents": "acceptMessage()",
             "kind": "function",

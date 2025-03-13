@@ -1,12 +1,18 @@
 # tact-sublime
 
-<center>
+<div align="center">
   <img src=".github/media/banner.png" alt="Tact + Sublime Text"/>
-</center>
+</div>
 
 🚀 Adds syntax highlighting, folding, code snippets, and miscellaneous support for the [Tact programming language](https://tact-lang.org/) to Sublime Text [3* and onward](#compatibility).
 
-⚡ Tact is a new programming language for TON blockchain focused on efficiency and simplicity. It is designed to be easy to learn and use and a good fit for smart contracts because it is a statically typed language with a simple syntax and a powerful type system.
+⚡ Tact is a fresh programming language for TON blockchain focused on efficiency and simplicity. It is designed to be easy to learn and use and a good fit for smart contracts because it is a statically typed language with a simple syntax and a powerful type system.
+
+[![Website](https://img.shields.io/badge/Website-blue?style=flat)](https://tact-lang.org)
+[![Documentation](https://img.shields.io/badge/Documentation-blue?style=flat)](https://docs.tact-lang.org)
+[![Twitter](https://img.shields.io/badge/X%2FTwitter-white?logo=x&style=flat&logoColor=gray)](https://x.com/tact_language)
+[![Telegram](https://img.shields.io/badge/Community_Chat-white?logo=telegram&style=flat)](https://t.me/tactlang)
+[![Telegram](https://img.shields.io/badge/Tact_Kitchen_🥣-white?logo=telegram&style=flat)](https://t.me/tact_kitchen)
 
 ## Features
 
@@ -105,32 +111,11 @@ Don't forget to run git pull from time to time to get the latest updates of this
 
 When the language server supports it, the [**LSP** package](https://packagecontrol.io/packages/LSP) enables improved autocomplete, go-to-definition, formatting, "hover docs," compiler errors and warnings, general diagnostics, and more.
 
-To set it up, install the package and open its settings (**Preferences: LSP Settings** in the command palette), then add this config:
+To install the base **LSP** package and set up the [official Tact language server](https://github.com/tact-lang/tact-language-server), refer to: [Editor Setup > Sublime Text](https://github.com/tact-lang/tact-language-server#sublime-text).
 
-```json
-{
-  "clients": {
-    "Tact": {
-      "enabled": true,
-      "command": ["tact-extracted-ls", "--stdio"],
-      "selector": "source.tact"
-    }
-  }
-}
-```
+For additional customization of the **LSP** package, see its [Customization page](https://lsp.sublimetext.io/customization/).
 
-Additionally, you can disable all snippets and suggestions provided by this (and other) packages and leave everything to LSPs. To do so, set `"inhibit_snippet_competions"` to `true` right after `"clients"` in the same settings (**Preferences: LSP Settings** in the command palette):
-
-```json
-{
-  "clients": { /*...*/ },
-  "inhibit_snippet_completions": true
-}
-```
-
-The configurations above assume you have installed the Tact language server extracted from the [tact-vscode](https://github.com/tact-lang/tact-vscode). If not, run `npm i—g tact-extracted-ls` to install it.
-
-To set up keyboard shortcuts for the language server, see [Key Bindings](https://lsp.sublimetext.io/customization/#keyboard-shortcuts-key-bindings).
+For example, to set up keyboard shortcuts for the language server, see [Key Bindings](https://lsp.sublimetext.io/customization/#keyboard-shortcuts-key-bindings).
 
 ## Compatibility
 
