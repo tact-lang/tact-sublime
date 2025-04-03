@@ -829,7 +829,7 @@
           </dict>
           <dict>
             <key>match</key>
-            <string>(?&lt;!\.)\b(message)\b</string>
+            <string>(?&lt;!\.)\b(message(?!\s*\((?:MessageParameters|\))))\b</string>
             <key>name</key>
             <string>keyword.other.message.tact</string>
           </dict>

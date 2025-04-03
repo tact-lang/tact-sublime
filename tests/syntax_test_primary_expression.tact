@@ -40,6 +40,21 @@ extends fun c(self: Int, ) {
     // <- entity.name.function.tact
     now ();
     // <- entity.name.function.tact
+    message(MessageParameters{to: sender(), value: 0});
+    // <- entity.name.function.tact
+    //      ^^^^^^^^^^^^^^^^^ entity.name.type.tact
+    //                       ^ punctuation.brackets.curly.tact
+    //                        ^^ variable.other.tact
+    //                          ^ punctuation.colon.tact
+    //                            ^^^^^^ entity.name.function.tact
+    //                                  ^^ punctuation.brackets.round.tact
+    //                                    ^ punctuation.comma.tact
+    //                                      ^^^^^ variable.other.tact
+    //                                           ^ punctuation.colon.tact
+    //                                             ^ constant.numeric.decimal.tact
+    //                                              ^ punctuation.brackets.curly.tact
+    //                                               ^ punctuation.brackets.round.tact
+    //                                                ^ punctuation.semi.tact
 
     // parens_expression
     ( 10 );
