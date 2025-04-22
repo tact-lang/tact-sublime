@@ -89,8 +89,8 @@
             "details": "<a href=\"https://docs.tact-lang.org/book/message-mode#base-modes\">Tact Docs</a>"
         },
         {
-            "trigger": "SendPayGasSeparately\tequal to 1",
-            "contents": "SendPayGasSeparately",
+            "trigger": "SendPayFwdFeesSeparately\tequal to 1",
+            "contents": "SendPayFwdFeesSeparately",
             "kind": ["variable", "c", "Constant"],
             "details": "<a href=\"https://docs.tact-lang.org/book/message-mode#optional-flags\">Tact Docs</a>"
         },
@@ -154,6 +154,66 @@
             "kind": ["variable", "c", "Constant"],
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativereserve-optional-flags\">Tact Docs</a>"
         },
+        {
+            "trigger": "TactExitCodeNullReferenceException\tequal to 128",
+            "contents": "TactExitCodeNullReferenceException",
+            "kind": ["variable", "c", "Constant"],
+            "details": "<a href=\"https://docs.tact-lang.org/book/exit-codes#128\">Tact Docs</a>"
+        },
+        {
+            "trigger": "TactExitCodeInvalidSerializationPrefix\tequal to 129",
+            "contents": "TactExitCodeInvalidSerializationPrefix",
+            "kind": ["variable", "c", "Constant"],
+            "details": "<a href=\"https://docs.tact-lang.org/book/exit-codes#129\">Tact Docs</a>"
+        },
+        {
+            "trigger": "TactExitCodeInvalidIncomingMessage\tequal to 130",
+            "contents": "TactExitCodeInvalidIncomingMessage",
+            "kind": ["variable", "c", "Constant"],
+            "details": "<a href=\"https://docs.tact-lang.org/book/exit-codes#130\">Tact Docs</a>"
+        },
+        {
+            "trigger": "TactExitCodeConstraintsError\tequal to 131",
+            "contents": "TactExitCodeConstraintsError",
+            "kind": ["variable", "c", "Constant"],
+            "details": "<a href=\"https://docs.tact-lang.org/book/exit-codes#131\">Tact Docs</a>"
+        },
+        {
+            "trigger": "TactExitCodeAccessDenied\tequal to 132",
+            "contents": "TactExitCodeAccessDenied",
+            "kind": ["variable", "c", "Constant"],
+            "details": "<a href=\"https://docs.tact-lang.org/book/exit-codes#132\">Tact Docs</a>"
+        },
+        {
+            "trigger": "TactExitCodeContractStopped\tequal to 133",
+            "contents": "TactExitCodeContractStopped",
+            "kind": ["variable", "c", "Constant"],
+            "details": "<a href=\"https://docs.tact-lang.org/book/exit-codes#133\">Tact Docs</a>"
+        },
+        {
+            "trigger": "TactExitCodeInvalidArgument\tequal to 134",
+            "contents": "TactExitCodeInvalidArgument",
+            "kind": ["variable", "c", "Constant"],
+            "details": "<a href=\"https://docs.tact-lang.org/book/exit-codes#134\">Tact Docs</a>"
+        },
+        {
+            "trigger": "TactExitCodeContractCodeNotFound\tequal to 135",
+            "contents": "TactExitCodeContractCodeNotFound",
+            "kind": ["variable", "c", "Constant"],
+            "details": "<a href=\"https://docs.tact-lang.org/book/exit-codes#135\">Tact Docs</a>"
+        },
+        {
+            "trigger": "TactExitCodeInvalidStandardAddress\tequal to 136",
+            "contents": "TactExitCodeInvalidStandardAddress",
+            "kind": ["variable", "c", "Constant"],
+            "details": "<a href=\"https://docs.tact-lang.org/book/exit-codes#136\">Tact Docs</a>"
+        },
+        {
+            "trigger": "TactExitCodeNotBasechainAddress\tequal to 138",
+            "contents": "TactExitCodeNotBasechainAddress",
+            "kind": ["variable", "c", "Constant"],
+            "details": "<a href=\"https://docs.tact-lang.org/book/exit-codes#138\">Tact Docs</a>"
+        },
 
         // Built-in Structs which are frequently used
         {
@@ -172,18 +232,25 @@
             "trigger": "StdAddress",
             "contents": "StdAddress",
             "kind": ["variable", "s", "Struct"],
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#parsestdaddress\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-addresses#parsestdaddress\">Tact Docs</a>"
         },
         {
             "trigger": "VarAddress",
             "contents": "VarAddress",
             "kind": ["variable", "s", "Struct"],
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#parsevaraddress\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-addresses#parsevaraddress\">Tact Docs</a>"
         },
         {
             "trigger": "BasechainAddress",
             "contents": "BasechainAddress",
-            "kind": ["variable", "s", "Struct"]
+            "kind": ["variable", "s", "Struct"],
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-addresses#basechainaddress\">Tact Docs</a>"
+        },
+        {
+            "trigger": "SignedBundle\taugment external messages for verification",
+            "contents": "SignedBundle",
+            "kind": ["variable", "s", "Struct"],
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-crypto#signedbundle\">Tact Docs</a>"
         },
 
         // Built-in types and serialization options
@@ -221,19 +288,19 @@
             "trigger": "Cell\tup to 1023 bits of data and 4 refs",
             "contents": "Cell",
             "kind": "type",
-            "details": "<a href=\"https://docs.tact-lang.org/book/types#primitive-types\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/book/cells#cells\">Tact Docs</a>"
         },
         {
             "trigger": "Builder\tused to construct Cells",
             "contents": "Builder",
             "kind": "type",
-            "details": "<a href=\"https://docs.tact-lang.org/book/types#primitive-types\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/book/cells#builders\">Tact Docs</a>"
         },
         {
             "trigger": "Slice\tused to parse Cells",
             "contents": "Slice",
             "kind": "type",
-            "details": "<a href=\"https://docs.tact-lang.org/book/types#primitive-types\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/book/cells#slices\">Tact Docs</a>"
         },
         {
             "trigger": "String\timmutable sequence of characters",
@@ -357,11 +424,11 @@
         },
 
         // Keywords
-        {
-            "trigger": "primitive",
-            "contents": "primitive $0",
-            "kind": "keyword"
-        },
+        // {
+        //     "trigger": "primitive",
+        //     "contents": "primitive $0",
+        //     "kind": "keyword"
+        // },
         {
             "trigger": "initOf\tobtain init package",
             "contents": "initOf $0",
@@ -567,117 +634,128 @@
             "details": "<a href=\"https://docs.tact-lang.org/book/contracts#receiver-functions\">Tact Docs</a>"
         },
 
-        // Core library: Common
-        {
-            "trigger": "now\tcurrent Unix time",
-            "contents": "now()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-common#now\">Tact Docs</a>"
-        },
-        {
-            "trigger": "curLt\tcurrent logical time",
-            "contents": "curLt()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#curlt\">Tact Docs</a>"
-        },
-        {
-            "trigger": "blockLt\tcurrent block logical time",
-            "contents": "blockLt()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#blocklt\">Tact Docs</a>"
-        },
-        {
-            "trigger": "myBalance\tremaining balance of the contract",
-            "contents": "myBalance()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-common#mybalance\">Tact Docs</a>"
-        },
-        {
-            "trigger": "myAddress\tAddress of the contract",
-            "contents": "myAddress()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-common#myaddress\">Tact Docs</a>"
-        },
-        {
-            "trigger": "sender\tAddress of the sender",
-            "contents": "sender()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-common#sender\">Tact Docs</a>"
-        },
-        {
-            "trigger": "contractHash\taccount ID of the contract address",
-            "contents": "contractHash(${1:code_Cell}, ${2:data_Cell})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-common#contracthash\">Tact Docs</a>"
-        },
-        {
-            "trigger": "context\treturns Context Struct",
-            "contents": "context()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-common#context\">Tact Docs</a>"
-        },
-        {
-            "trigger": "newAddress\tAddress from chain Int and hash Int",
-            "contents": "newAddress(${1:chain_Int}, ${2:hash_Int})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-common#newaddress\">Tact Docs</a>"
-        },
-        {
-            "trigger": "emptyBasechainAddress\taddr_none or Address with a null hash",
-            "contents": "emptyBasechainAddress()",
-            "kind": "function"
-        },
-        {
-            "trigger": "newBasechainAddress\tAddress in the chain ID 0",
-            "contents": "newBasechainAddress(${1:hash_Int})",
-            "kind": "function"
-        },
-        {
-            "trigger": "contractBasechainAddress\tAddress in the  chain ID 0 from StateInit",
-            "contents": "contractBasechainAddress(${1:StateInit})",
-            "kind": "function"
-        },
-        {
-            "trigger": "contractAddress\tAddress in chain 0 from StateInit",
-            "contents": "contractAddress(${1:StateInit})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-common#contractaddress\">Tact Docs</a>"
-        },
-        {
-            "trigger": "contractAddressExt\tAddress from chain Int, code Cell and data Cell",
-            "contents": "contractAddressExt(${1:chain_Int}, ${2:code_Cell}, ${3:data_Cell})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-common#contractaddressext\">Tact Docs</a>"
-        },
+        // Core library: Communication and messaging
         {
             "trigger": "send\tsend a message using SendParameters Struct",
             "contents": "send($0)",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-common#send\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-send#send\">Tact Docs</a>"
         },
         {
             "trigger": "message\tsend a message using MessageParameters Struct",
             "contents": "message($0)",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-common#message\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-send#message\">Tact Docs</a>"
         },
         {
             "trigger": "deploy\tdeploy a contract using DeployParameters Struct",
             "contents": "deploy($0)",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-common#deploy\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-send#deploy\">Tact Docs</a>"
         },
         {
             "trigger": "cashback\tforward excess funds back",
             "contents": "cashback($0)",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-common#cashback\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-send#cashback\">Tact Docs</a>"
         },
         {
             "trigger": "emit\tsend a message body Cell to the outer world",
             "contents": "emit(${1:body_Cell})",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-common#emit\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-send#emit\">Tact Docs</a>"
+        },
+        {
+            "trigger": "sendRawMessage\tsend msg Cell with mode Int",
+            "contents": "sendRawMessage(${1:msg_Cell}, ${2:mode_Int})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-send#sendrawmessage\">Tact Docs</a>"
+        },
+        {
+            "trigger": "sendRawMessageReturnForwardFee\tsend msg Cell with mode Int and get fees",
+            "contents": "sendRawMessageReturnForwardFee(${1:msg_Cell}, ${2:mode_Int})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-send#sendrawmessagereturnforwardfee\">Tact Docs</a>"
+        },
+
+        // Core library: Context and state
+        {
+            "trigger": "now\tcurrent Unix time",
+            "contents": "now()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-contextstate#now\">Tact Docs</a>"
+        },
+        {
+            "trigger": "curLt\tcurrent logical time",
+            "contents": "curLt()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-contextstate#curlt\">Tact Docs</a>"
+        },
+        {
+            "trigger": "blockLt\tcurrent block logical time",
+            "contents": "blockLt()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-contextstate#blocklt\">Tact Docs</a>"
+        },
+        {
+            "trigger": "sender\tAddress of the sender",
+            "contents": "sender()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-contextstate#sender\">Tact Docs</a>"
+        },
+        {
+            "trigger": "context\treturns Context Struct",
+            "contents": "context()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-contextstate#context\">Tact Docs</a>"
+        },
+        {
+            "trigger": "myAddress\tAddress of the contract",
+            "contents": "myAddress()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-contextstate#myaddress\">Tact Docs</a>"
+        },
+        {
+            "trigger": "myCode\tcurrent contract code",
+            "contents": "myCode()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-contextstate/#mycode\">Tact Docs</a>"
+        },
+        {
+            "trigger": "myStorageDue\tstorage fee debt in nanoToncoins",
+            "contents": "myStorageDue()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-contextstate/#mystoragedue\">Tact Docs</a>"
+        },
+        {
+            "trigger": "myBalance\tremaining balance of the contract",
+            "contents": "myBalance()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-contextstate#mybalance\">Tact Docs</a>"
+        },
+        {
+            "trigger": "gasConsumed\tget gas consumed so far",
+            "contents": "gasConsumed()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-contextstate/#gasconsumed\">Tact Docs</a>"
+        },
+        {
+            "trigger": "nativeReserve\treserve nanoToncoin amount Int with mode Int",
+            "contents": "nativeReserve(${1:amount_Int}, ${2:mode_Int})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-contextstate#nativereserve\">Tact Docs</a>"
+        },
+        {
+            "trigger": "commit\tconsider current execution successful",
+            "contents": "commit()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-contextstate#commit\">Tact Docs</a>"
+        },
+        {
+            "trigger": "getConfigParam\tload config param id Int from blockchain",
+            "contents": "getConfigParam(${1:id_Int})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-contextstate#getconfigparam\">Tact Docs</a>"
         },
 
         // Core library: Compile-time
@@ -724,6 +802,120 @@
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-comptime#crc32\">Tact Docs</a>"
         },
 
+        // Core library: Cells, Builders and Slices
+        {
+            "trigger": "beginCell\tnew Builder",
+            "contents": "beginCell()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-cells#begincell\">Tact Docs</a>"
+        },
+        {
+            "trigger": "emptyCell\talias to beginCell().endCell()",
+            "contents": "emptyCell()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-cells#emptycell\">Tact Docs</a>"
+        },
+        {
+            "trigger": "emptySlice\talias to emptyCell().asSlice()",
+            "contents": "emptySlice()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-cells#emptyslice\">Tact Docs</a>"
+        },
+
+        // Core library: Addresses
+        {
+            "trigger": "newAddress\tAddress from chain Int and hash Int",
+            "contents": "newAddress(${1:chain_Int}, ${2:hash_Int})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-addresses#newaddress\">Tact Docs</a>"
+        },
+        {
+            "trigger": "contractAddress\tAddress in chain 0 from StateInit",
+            "contents": "contractAddress(${1:StateInit})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-addresses#contractaddress\">Tact Docs</a>"
+        },
+        {
+            "trigger": "contractAddressExt\tAddress from chain Int, code Cell and data Cell",
+            "contents": "contractAddressExt(${1:chain_Int}, ${2:code_Cell}, ${3:data_Cell})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-addresses#contractaddressext\">Tact Docs</a>"
+        },
+        {
+            "trigger": "contractHash\taccount ID of the contract address",
+            "contents": "contractHash(${1:code_Cell}, ${2:data_Cell})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-addresses#contracthash\">Tact Docs</a>"
+        },
+        {
+            "trigger": "forceBasechain\tthrow an exception if its not basechain",
+            "contents": "forceBasechain(${1:address})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#forcebasechain\">Tact Docs</a>"
+        },
+        {
+            "trigger": "forceWorkchain\tthrow an errorCode on workchain mismatch",
+            "contents": "forceWorkchain(${1:address}, ${2:workchain}, ${3:errorCode})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#forceworkchain\">Tact Docs</a>"
+        },
+        {
+            "trigger": "emptyBasechainAddress\taddr_none or Address with a null hash",
+            "contents": "emptyBasechainAddress()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-addresses#emptybasechainaddress\">Tact Docs</a>"
+        },
+        {
+            "trigger": "newBasechainAddress\tAddress in the chain ID 0",
+            "contents": "newBasechainAddress(${1:hash_Int})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-addresses#newbasechainaddress\">Tact Docs</a>"
+        },
+        {
+            "trigger": "contractBasechainAddress\tAddress in the  chain ID 0 from StateInit",
+            "contents": "contractBasechainAddress(${1:StateInit})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-addresses#contractbasechainaddress\">Tact Docs</a>"
+        },
+        {
+            "trigger": "parseStdAddress\tparse StdAddress from a Slice",
+            "contents": "parseStdAddress(${1:slice_Slice})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-addresses#parsestdaddress\">Tact Docs</a>"
+        },
+        {
+            "trigger": "parseVarAddress\tparse VarAddress from a Slice",
+            "contents": "parseVarAddress(${1:slice_Slice})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-addresses#parsevaraddress\">Tact Docs</a>"
+        },
+
+        // Core library: Strings and StringBuilders
+        {
+            "trigger": "beginString\tnew StringBuilder",
+            "contents": "beginString()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-strings#beginstring\">Tact Docs</a>"
+        },
+        {
+            "trigger": "beginComment\tnew StringBuilder for a comment string",
+            "contents": "beginComment()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-strings#begincomment\">Tact Docs</a>"
+        },
+        {
+            "trigger": "beginTailString\tnew StringBuilder for a tail string",
+            "contents": "beginTailString()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-strings#begintailstring\">Tact Docs</a>"
+        },
+        {
+            "trigger": "beginStringFromBuilder\tnew StringBuilder from an existing one",
+            "contents": "beginStringFromBuilder()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-strings#beginstringfrombuilder\">Tact Docs</a>"
+        },
+
         // Core library: Debug
         {
             "trigger": "require\tcheck the condition",
@@ -738,7 +930,7 @@
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-debug#dump\">Tact Docs</a>"
         },
         {
-            "trigger": "dumpStack\tprint state variables to debug console",
+            "trigger": "dumpStack\tprint stack contents to debug console",
             "contents": "dumpStack()",
             "kind": "function",
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-debug#dumpstack\">Tact Docs</a>"
@@ -761,49 +953,81 @@
             "kind": "function",
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-debug#throwunless\">Tact Docs</a>"
         },
-        {
-            "trigger": "nativeThrow\tdeprecated",
-            "contents": "nativeThrow(${1:code_Int})",
+
+        // Core library: Gas and fees
+       {
+            "trigger": "getComputeFee\tcalc compute cost in nanoToncoins",
+            "contents": "getComputeFee(${1:gas_used_Int, ${2:is_masterchain_Bool})",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-debug#nativethrow\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-gas/#getcomputefee\">Tact Docs</a>"
         },
         {
-            "trigger": "nativeThrowIf\tthrow exit code under condition",
-            "contents": "nativeThrowIf(${1:code_Int}, ${2:condition_Bool})",
+            "trigger": "getStorageFee\tcalc storage fees in nanoToncoins",
+            "contents": "getStorageFee(${1:cells_Int, ${2:bits_Int}, ${3:seconds_Int}, ${4:is_masterchain_Bool})",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-debug#nativethrowif\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-gas/#getstoragefee\">Tact Docs</a>"
         },
         {
-            "trigger": "nativeThrowUnless\tthrow exit code unless condition",
-            "contents": "nativeThrowUnless(${1:code_Int}, ${2:condition_Bool})",
+            "trigger": "getForwardFee\tcalc forward fees in nanoToncoins",
+            "contents": "getForwardFee(${1:cells_Int, ${2:bits_Int}, ${3:is_masterchain_Bool})",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-debug#nativethrowunless\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-gas/#getforwardfee\">Tact Docs</a>"
         },
         {
-            "trigger": "parseStdAddress\tparse StdAddress from a Slice",
-            "contents": "parseStdAddress(${1:slice_Slice})",
+            "trigger": "getSimpleComputeFee\tcalc extra compute cost in nanoToncoins",
+            "contents": "getSimpleComputeFee(${1:gas_used_Int, ${2:is_masterchain_Bool})",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#parsestdaddress\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-gas/#getsimplecomputefee\">Tact Docs</a>"
         },
         {
-            "trigger": "parseVarAddress\tparse VarAddress from a Slice",
-            "contents": "parseVarAddress(${1:slice_Slice})",
+            "trigger": "getSimpleForwardFee\tcalc extra forward fees in nanoToncoins",
+            "contents": "getSimpleForwardFee(${1:cells_Int, ${2:bits_Int}, ${3:is_masterchain_Bool})",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#parsevaraddress\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-gas/#getsimpleforwardfee\">Tact Docs</a>"
+        },
+        {
+            "trigger": "getOriginalFwdFee\tcalc original fwd_fee in nanoToncoins",
+            "contents": "getOriginalFwdFee(${1:fwd_fee_Int, ${2:is_masterchain_Bool})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-gas/#getoriginalfwdfee\">Tact Docs</a>"
+        },
+        {
+            "trigger": "setGasLimit\tlimit gas to X nanoToncoin",
+            "contents": "setGasLimit($1)",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-gas/#setgaslimit\">Tact Docs</a>"
+        },
+        {
+            "trigger": "acceptMessage\tbuy some gas for external message",
+            "contents": "acceptMessage()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-gas#acceptmessage\">Tact Docs</a>"
         },
 
-        // Core library: Random
+        // Core library: Cryptography
         {
-            "trigger": "random\tpseudo-random: min ≤ unsigned Int < max",
-            "contents": "random(${1:min_Int}, ${2:max_Int})",
+            "trigger": "checkSignature\tEd25519 signature check of hash using pubkey",
+            "contents": "checkSignature(${1:hash_Int}, ${2:signature_Slice}, ${3:pubkey_Int})",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-random#random\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-crypto#checksignature\">Tact Docs</a>"
         },
         {
-            "trigger": "randomInt\tpseudo-random unsigned 256-bit Int",
-            "contents": "randomInt()",
+            "trigger": "checkDataSignature\tEd25519 signature check of data using pubkey",
+            "contents": "checkDataSignature(${1:data_Int}, ${2:signature_Slice}, ${3:pubkey_Int})",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-random#randomint\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-crypto#checkdatasignature\">Tact Docs</a>"
+        },
+        {
+            "trigger": "sha256\tSHA-256 hash of a Slice or String",
+            "contents": "sha256(${1:Slice_or_String})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-crypto#sha256\">Tact Docs</a>"
+        },
+        {
+            "trigger": "keccak256\tKeccak-256 hash of a Slice",
+            "contents": "keccak256(${1:Slice_or_String})",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-crypto#keccak256\">Tact Docs</a>"
         },
 
         // Core library: Math
@@ -891,209 +1115,61 @@
             "kind": "function",
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-math#mulshiftceil\">Tact Docs</a>"
         },
-        {
-            "trigger": "checkSignature\tEd25519 signature check of hash using pubkey",
-            "contents": "checkSignature(${1:hash_Int}, ${2:signature_Slice}, ${3:pubkey_Int})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-math#checksignature\">Tact Docs</a>"
-        },
-        {
-            "trigger": "checkDataSignature\tEd25519 signature check of data using pubkey",
-            "contents": "checkDataSignature(${1:data_Int}, ${2:signature_Slice}, ${3:pubkey_Int})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-math#checkdatasignature\">Tact Docs</a>"
-        },
-        {
-            "trigger": "sha256\tSHA-256 hash of a Slice or String",
-            "contents": "sha256(${1:Slice_or_String})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-math#sha256\">Tact Docs</a>"
-        },
 
-        // Core library: Strings and StringBuilders
+        // Core library: Random
         {
-            "trigger": "beginString\tnew StringBuilder",
-            "contents": "beginString()",
+            "trigger": "random\tpseudo-random: min ≤ unsigned Int < max",
+            "contents": "random(${1:min_Int}, ${2:max_Int})",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-strings#beginstring\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-random#random\">Tact Docs</a>"
         },
         {
-            "trigger": "beginComment\tnew StringBuilder for a comment string",
-            "contents": "beginComment()",
+            "trigger": "randomInt\tpseudo-random unsigned 256-bit Int",
+            "contents": "randomInt()",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-strings#begincomment\">Tact Docs</a>"
-        },
-        {
-            "trigger": "beginTailString\tnew StringBuilder for a tail string",
-            "contents": "beginTailString()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-strings#begintailstring\">Tact Docs</a>"
-        },
-
-        // Core library: Cells, Builders and Slices
-        {
-            "trigger": "beginCell\tnew Builder",
-            "contents": "beginCell()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-cells#begincell\">Tact Docs</a>"
-        },
-        {
-            "trigger": "emptyCell\talias to beginCell().endCell()",
-            "contents": "emptyCell()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-cells#emptycell\">Tact Docs</a>"
-        },
-        {
-            "trigger": "emptySlice\talias to emptyCell().asSlice()",
-            "contents": "emptySlice()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-cells#emptyslice\">Tact Docs</a>"
-        },
-
-        // Core library: Advanced
-        {
-            "trigger": "getConfigParam\tload config param id Int from blockchain",
-            "contents": "getConfigParam(${1:id_Int})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#getconfigparam\">Tact Docs</a>"
-        },
-        {
-            "trigger": "forceBasechain\tthrow an exception if its not basechain",
-            "contents": "forceBasechain(${1:address})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#forcebasechain\">Tact Docs</a>"
-        },
-        {
-            "trigger": "acceptMessage\tbuy some gas for external message",
-            "contents": "acceptMessage()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#acceptmessage\">Tact Docs</a>"
-        },
-        {
-            "trigger": "commit\tconsider current execution successful",
-            "contents": "commit()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#commit\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-random#randomint\">Tact Docs</a>"
         },
         {
             "trigger": "nativePrepareRandom\tprepare RNG with logical time",
             "contents": "nativePrepareRandom()",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativepreparerandom\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-random#nativepreparerandom\">Tact Docs</a>"
         },
         {
             "trigger": "nativeRandomize\trandomize RNG with seed Int",
             "contents": "nativeRandomize(${1:seed_Int})",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativerandomize\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-random#nativerandomize\">Tact Docs</a>"
         },
         {
             "trigger": "nativeRandomizeLt\trandomize RNG with logical time",
             "contents": "nativeRandomizeLt()",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativerandomizelt\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-random#nativerandomizelt\">Tact Docs</a>"
         },
         {
             "trigger": "nativeRandom\tpseudo-random 256-bit unsigned Int",
             "contents": "nativeRandom()",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativerandom\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-random#nativerandom\">Tact Docs</a>"
         },
         {
             "trigger": "nativeRandomInterval\tpseudo-random: 0 ≤ unsigned Int < max",
             "contents": "nativeRandomInterval(${1:max_Int})",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativerandominterval\">Tact Docs</a>"
-        },
-        {
-            "trigger": "nativeSendMessage\tsend msg Cell with mode Int",
-            "contents": "nativeSendMessage(${1:msg_Cell}, ${2:mode_Int})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativesendmessage\">Tact Docs</a>"
-        },
-        {
-            "trigger": "nativeSendMessageReturnForwardFee\tsend msg Cell with mode Int and get fees",
-            "contents": "nativeSendMessageReturnForwardFee(${1:msg_Cell}, ${2:mode_Int})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativesendmessagereturnforwardfee\">Tact Docs</a>"
-        },
-        {
-            "trigger": "nativeReserve\treserve nanoToncoin amount Int with mode Int",
-            "contents": "nativeReserve(${1:amount_Int}, ${2:mode_Int})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced#nativereserve\">Tact Docs</a>"
-        },
-        {
-            "trigger": "setGasLimit\tlimit gas to X nanoToncoin",
-            "contents": "setGasLimit($1)",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#setgaslimit\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-random#nativerandominterval\">Tact Docs</a>"
         },
         {
             "trigger": "getSeed\tget seed for RNG",
             "contents": "getSeed()",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#getseed\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-random/#getseed\">Tact Docs</a>"
         },
         {
             "trigger": "setSeed\tset seed for RNG",
             "contents": "setSeed($1)",
             "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#setseed\">Tact Docs</a>"
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-random/#setseed\">Tact Docs</a>"
         },
-        {
-            "trigger": "myCode\tcurrent contract code",
-            "contents": "myCode()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#mycode\">Tact Docs</a>"
-        },
-        {
-            "trigger": "gasConsumed\tget gas consumed so far",
-            "contents": "gasConsumed()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#gasconsumed\">Tact Docs</a>"
-        },
-        {
-            "trigger": "getComputeFee\tcalc compute cost in nanoToncoins",
-            "contents": "getComputeFee(${1:gas_used_Int, ${2:is_masterchain_Bool})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#getcomputefee\">Tact Docs</a>"
-        },
-        {
-            "trigger": "getStorageFee\tcalc storage fees in nanoToncoins",
-            "contents": "getStorageFee(${1:cells_Int, ${2:bits_Int}, ${3:seconds_Int}, ${4:is_masterchain_Bool})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#getstoragefee\">Tact Docs</a>"
-        },
-        {
-            "trigger": "getForwardFee\tcalc forward fees in nanoToncoins",
-            "contents": "getForwardFee(${1:cells_Int, ${2:bits_Int}, ${3:is_masterchain_Bool})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#getforwardfee\">Tact Docs</a>"
-        },
-        {
-            "trigger": "getSimpleComputeFee\tcalc extra compute cost in nanoToncoins",
-            "contents": "getSimpleComputeFee(${1:gas_used_Int, ${2:is_masterchain_Bool})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#getsimplecomputefee\">Tact Docs</a>"
-        },
-        {
-            "trigger": "getSimpleForwardFee\tcalc extra forward fees in nanoToncoins",
-            "contents": "getSimpleForwardFee(${1:cells_Int, ${2:bits_Int}, ${3:is_masterchain_Bool})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#getsimpleforwardfee\">Tact Docs</a>"
-        },
-        {
-            "trigger": "getOriginalFwdFee\tcalc original fwd_fee in nanoToncoins",
-            "contents": "getOriginalFwdFee(${1:fwd_fee_Int, ${2:is_masterchain_Bool})",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#getoriginalfwdfee\">Tact Docs</a>"
-        },
-        {
-            "trigger": "myStorageDue\tstorage fee debt in nanoToncoins",
-            "contents": "myStorageDue()",
-            "kind": "function",
-            "details": "<a href=\"https://docs.tact-lang.org/ref/core-advanced/#mystoragedue\">Tact Docs</a>"
-        }
     ]
 }

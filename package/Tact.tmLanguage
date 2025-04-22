@@ -454,7 +454,7 @@
             <key>comment</key>
             <string>Other constants from the core library</string>
             <key>match</key>
-            <string>(?&lt;!\.)\b(SendDefaultMode|SendRemainingValue|SendRemainingBalance|SendPayGasSeparately|SendIgnoreErrors|SendBounceIfActionFail|SendDestroyIfZero|SendOnlyEstimateFee|ReserveExact|ReserveAllExcept|ReserveAtMost|ReserveAddOriginalBalance|ReserveInvertSign|ReserveBounceIfActionFail)\b</string>
+            <string>(?&lt;!\.)\b(SendDefaultMode|SendRemainingValue|SendRemainingBalance|SendPayGasSeparately|SendIgnoreErrors|SendBounceIfActionFail|SendDestroyIfZero|SendOnlyEstimateFee|ReserveExact|ReserveAllExcept|ReserveAtMost|ReserveAddOriginalBalance|ReserveInvertSign|ReserveBounceIfActionFail|TactExitCodeNullReferenceException|TactExitCodeInvalidSerializationPrefix|TactExitCodeInvalidIncomingMessage|TactExitCodeConstraintsError|TactExitCodeAccessDenied|TactExitCodeContractStopped|TactExitCodeInvalidArgument|TactExitCodeContractCodeNotFound|TactExitCodeInvalidStandardAddress|TactExitCodeNotBasechainAddress)\b</string>
             <key>name</key>
             <string>constant.other.builtin.tact</string>
           </dict>
@@ -823,25 +823,25 @@
           </dict>
           <dict>
             <key>match</key>
-            <string>(?&lt;!\.)\b(struct)\b</string>
+            <string>(?&lt;!\.)\b(struct)\b(?!\s*:)</string>
             <key>name</key>
             <string>keyword.other.struct.tact</string>
           </dict>
           <dict>
             <key>match</key>
-            <string>(?&lt;!\.)\b(message(?!\s*\((?:MessageParameters|\))))\b</string>
+            <string>(?&lt;!\.)\b(message)\b(?!\s*(?::|\(\s*M|\(\s*\)))</string>
             <key>name</key>
             <string>keyword.other.message.tact</string>
           </dict>
           <dict>
             <key>match</key>
-            <string>(?&lt;!\.)\b(trait)\b</string>
+            <string>(?&lt;!\.)\b(trait)\b(?!\s*:)</string>
             <key>name</key>
             <string>keyword.other.trait.tact</string>
           </dict>
           <dict>
             <key>match</key>
-            <string>(?&lt;!\.)\b(contract)\b</string>
+            <string>(?&lt;!\.)\b(contract)\b(?!\s*:)</string>
             <key>name</key>
             <string>keyword.other.contract.tact</string>
           </dict>
