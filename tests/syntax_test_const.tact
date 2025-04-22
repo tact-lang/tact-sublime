@@ -65,6 +65,27 @@ fun builtin() {
     ReserveBounceIfActionFail;
     // <- constant.other.builtin.tact
 
+    TactExitCodeNullReferenceException;
+    // <- constant.other.builtin.tact
+    TactExitCodeInvalidSerializationPrefix;
+    // <- constant.other.builtin.tact
+    TactExitCodeInvalidIncomingMessage;
+    // <- constant.other.builtin.tact
+    TactExitCodeConstraintsError;
+    // <- constant.other.builtin.tact
+    TactExitCodeAccessDenied;
+    // <- constant.other.builtin.tact
+    TactExitCodeContractStopped;
+    // <- constant.other.builtin.tact
+    TactExitCodeInvalidArgument;
+    // <- constant.other.builtin.tact
+    TactExitCodeContractCodeNotFound;
+    // <- constant.other.builtin.tact
+    TactExitCodeInvalidStandardAddress;
+    // <- constant.other.builtin.tact
+    TactExitCodeNotBasechainAddress;
+    // <- constant.other.builtin.tact
+
     self.storageReserve;
     //   ^^^^^^^^^^^^^^ constant.other.builtin.tact
 }

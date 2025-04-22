@@ -2,6 +2,8 @@
 
 struct Basic {
     prop: Int;
+    message: Cell;
+    struct: Cell;
 }
 
 extends fun c(self: Int, ) {
@@ -64,7 +66,7 @@ extends fun c(self: Int, ) {
     //    ^ punctuation.semi.tact
 
     // struct_instance_expression
-    Basic{prop: ton("1"), };
+    Basic{prop: ton("1"), message: emptyCell(), struct: emptyCell(), };
     // <- entity.name.type.tact
     //   ^ punctuation.brackets.curly.tact
     //    ^^^^ variable.other.tact
@@ -76,10 +78,20 @@ extends fun c(self: Int, ) {
     //                ^ string.quoted.double.tact punctuation.definition.string.end.tact
     //                 ^ punctuation.brackets.round.tact
     //                  ^ punctuation.comma.tact
-    //                    ^ punctuation.brackets.curly.tact
-    //                     ^ punctuation.semi.tact
+    //                    ^^^^^^^ variable.other.tact
+    //                           ^ punctuation.colon.tact
+    //                             ^^^^^^^^^ entity.name.function.tact
+    //                                      ^^ punctuation.brackets.round.tact
+    //                                        ^ punctuation.comma.tact
+    //                                          ^^^^^^ variable.other.tact
+    //                                                ^ punctuation.colon.tact
+    //                                                  ^^^^^^^^^ entity.name.function.tact
+    //                                                           ^^ punctuation.brackets.round.tact
+    //                                                             ^ punctuation.comma.tact
+    //                                                               ^ punctuation.brackets.curly.tact
+    //                                                                ^ punctuation.semi.tact
 
-    // punned struct_instance_expression
+    // punned (and incomplete) struct_instance_expression
     Basic{prop, };
     // <- entity.name.type.tact
     //   ^ punctuation.brackets.curly.tact
