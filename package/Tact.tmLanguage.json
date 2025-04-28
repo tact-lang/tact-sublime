@@ -352,8 +352,8 @@
             }
           },
           {
-            "comment": "map<K, V>",
-            "begin": "(?<!\\.)\\b(map)\\s*(<)",
+            "comment": "map<K, V> or set<T>",
+            "begin": "(?<!\\.)\\b(map|set)\\s*(<)",
             "beginCaptures": {
               "1": {
                 "name": "entity.name.type.tact"

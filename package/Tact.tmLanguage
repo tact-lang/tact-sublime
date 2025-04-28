@@ -541,9 +541,9 @@
           </dict>
           <dict>
             <key>comment</key>
-            <string>map&lt;K, V&gt;</string>
+            <string>map&lt;K, V&gt; or set&lt;T&gt;</string>
             <key>begin</key>
-            <string>(?&lt;!\.)\b(map)\s*(&lt;)</string>
+            <string>(?&lt;!\.)\b(map|set)\s*(&lt;)</string>
             <key>beginCaptures</key>
             <dict>
               <key>1</key>

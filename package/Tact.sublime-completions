@@ -704,6 +704,12 @@
             "details": "<a href=\"https://docs.tact-lang.org/ref/core-contextstate#sender\">Tact Docs</a>"
         },
         {
+            "trigger": "inMsg\tSlice body of the received message",
+            "contents": "inMsg()",
+            "kind": "function",
+            "details": "<a href=\"https://docs.tact-lang.org/ref/core-contextstate#inmsg\">Tact Docs</a>"
+        },
+        {
             "trigger": "context\treturns Context Struct",
             "contents": "context()",
             "kind": "function",
