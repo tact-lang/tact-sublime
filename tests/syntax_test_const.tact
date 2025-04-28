@@ -42,6 +42,8 @@ fun builtin() {
 
     SendPayGasSeparately;
     // <- constant.other.builtin.tact
+    SendPayFwdFeesSeparately;
+    // <- constant.other.builtin.tact
     SendIgnoreErrors;
     // <- constant.other.builtin.tact
     SendBounceIfActionFail;
