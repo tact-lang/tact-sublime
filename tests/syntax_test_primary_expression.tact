@@ -1,4 +1,5 @@
 // SYNTAX TEST "Packages/Tact/package/Tact.tmLanguage"
+// fmt-ignore
 
 struct Basic {
     prop: Int;
@@ -57,6 +58,73 @@ extends fun c(self: Int, ) {
     //                                              ^ punctuation.brackets.curly.tact
     //                                               ^ punctuation.brackets.round.tact
     //                                                ^ punctuation.semi.tact
+
+    // map
+    map<> {};
+    // <- entity.name.type.tact
+    // ^^ punctuation.brackets.angle.tact
+    //    ^^ punctuation.brackets.curly.tact
+    //      ^ punctuation.semi.tact
+    map<Int, Int,> {};
+    //  ^^^ entity.name.type.tact
+    //     ^ punctuation.comma.tact
+    //       ^^^ entity.name.type.tact
+    //          ^ punctuation.comma.tact
+    //           ^ punctuation.brackets.angle.tact
+    map<Address, Int as uint8> {
+        //       ^^^ entity.name.type.tact
+        //           ^^ keyword.other.as.tact storage.modifier.tact
+        //              ^^^^^ entity.name.type.tact
+        //                   ^ punctuation.brackets.angle.tact
+        address("yo"): 15,
+        // <- entity.name.function.tact
+        //     ^ punctuation.brackets.round.tact
+        //      ^ string.quoted.double.tact punctuation.definition.string.begin.tact
+        //       ^^ string.quoted.double.tact
+        //         ^ string.quoted.double.tact punctuation.definition.string.end.tact
+        //          ^ punctuation.brackets.round.tact
+        //           ^ punctuation.colon.tact
+        //             ^^ constant.numeric.decimal.tact
+        //               ^ punctuation.comma.tact
+        address("yo2"): 16,
+        // <- entity.name.function.tact
+        //      ^^^^^ string.quoted.double.tact
+        };
+    //  ^ punctuation.brackets.curly.tact
+    //   ^ punctuation.semi.tact
+
+    // set
+    set<> {};
+    // <- entity.name.type.tact
+    // ^^ punctuation.brackets.angle.tact
+    //    ^^ punctuation.brackets.curly.tact
+    //      ^ punctuation.semi.tact
+        set<Int,> {
+        // ^ punctuation.brackets.angle.tact
+        //  ^^^ entity.name.type.tact
+        //     ^ punctuation.comma.tact
+        //      ^ punctuation.brackets.angle.tact
+        //        ^ punctuation.brackets.curly.tact
+        10,
+        // <- constant.numeric.decimal.tact
+        //^ punctuation.comma.tact
+        20,
+        // <- constant.numeric.decimal.tact
+        //^ punctuation.comma.tact
+        100,
+        // <- constant.numeric.decimal.tact
+        // ^ punctuation.comma.tact
+        ascii("tact"),
+        // <- entity.name.function.tact
+        //   ^ punctuation.brackets.round.tact
+        //    ^ string.quoted.double.tact punctuation.definition.string.begin.tact
+        //     ^^^^ string.quoted.double.tact
+        //         ^ string.quoted.double.tact punctuation.definition.string.end.tact
+        //          ^ punctuation.brackets.round.tact
+        //           ^ punctuation.comma.tact
+        };
+    //  ^ punctuation.brackets.curly.tact
+    //   ^ punctuation.semi.tact
 
     // parens_expression
     ( 10 );
