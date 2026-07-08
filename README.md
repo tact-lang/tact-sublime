@@ -1,3 +1,10 @@
+> [!CAUTION]
+> Since this project is [vendored into GitHub Linguist](https://github.com/github-linguist/linguist/blob/e9fe3c9f230cd9220afcd057f75702de4d7700c9/grammars.yml#L1194-L1195), it has entered maintenance mode rather than complete deprecation. Pull requests are not accepted at the moment —
+> please, bring any problems or tasks to [issues](https://github.com/tact-lang/tact-sublime/issues).
+>
+> For up-to-date tools for TON contract development, see
+> [IDEs and editor plugins](https://docs.ton.org/contracts/overview#ides-and-editor-plugins).
+
 # tact-sublime
 
 <div align="center">
